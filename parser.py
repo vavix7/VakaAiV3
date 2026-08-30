@@ -180,88 +180,6 @@ def parse_activity_text(
     return entries, errors
 
 
-@dataclass
-class HumanMonitoringEntry:
-    """Entry from the compact game activity table.
-
-    Source format:
-      NICK_OR_ID WEEK_ACTIVITY GAME_TOTAL TOURNAMENT_ACTIVITY TOURNAMENT_TOTAL
-
-    The last four whitespace-separated fields are numeric, so nicknames may
-    contain spaces. The values are snapshots, not deltas.
-    """
-    name_or_id: str
-    week_activity: int
-    game_total: int
-    tournament_activity: int
-    tournament_total: int
-
-
-def parse_human_monitoring_text(text: str):
-    """Parse the explicit VAKA_ACTIVITY_LIST format.
-
-    The first non-empty line MUST be ``VAKA_ACTIVITY_LIST`` (or the Russian
-    marker ``СПИСОК АКТИВНОСТИ``). This explicit marker prevents ordinary chat
-    messages from being mistaken for monitoring data.
-    """
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
-    if not lines:
-        return [], ["Пустой список активности."]
-
-    marker = lines[0].strip().upper()
-    allowed = {"VAKA_ACTIVITY_LIST", "СПИСОК АКТИВНОСТИ"}
-    if marker not in allowed:
-        return [], ["Не найден маркер VAKA_ACTIVITY_LIST / СПИСОК АКТИВНОСТИ."]
-
-    entries = []
-    errors = []
-    seen = set()
-
-    for line_no, line in enumerate(lines[1:], start=2):
-        # Ignore optional table header copied from a screenshot/text table.
-        compact = re.sub(r"[\s/]+", " ", line).strip().lower()
-        if ("name" in compact or "ник" in compact) and "акт" in compact:
-            continue
-
-        m = re.match(
-            r"^\s*(.*?)\s+([0-9][0-9\s.,]*)\s+([0-9][0-9\s.,]*)\s+"
-            r"([0-9][0-9\s.,]*)\s+([0-9][0-9\s.,]*)\s*$",
-            line,
-        )
-        if not m:
-            errors.append(
-                f"Строка {line_no}: ожидается «Ник/ID Акт_неделя Акт_всего Тур_акт Тур_всего»."
-            )
-            continue
-
-        name = m.group(1).strip()
-        if not name:
-            errors.append(f"Строка {line_no}: пустой ник/ID.")
-            continue
-
-        try:
-            vals = [clean_number(m.group(i)) for i in range(2, 6)]
-        except ValueError:
-            errors.append(f"Строка {line_no}: неверное число.")
-            continue
-
-        if any(v < 0 for v in vals):
-            errors.append(f"Строка {line_no}: отрицательное значение.")
-            continue
-
-        key = name.casefold()
-        if key in seen:
-            errors.append(f"Строка {line_no}: игрок «{name}» повторяется.")
-            continue
-        seen.add(key)
-
-        entries.append(HumanMonitoringEntry(name, *vals))
-
-    if not entries:
-        errors.append("Нет ни одной строки игрока.")
-    return entries, errors
-
-
 def total_activity(
     entries: list[ActivityEntry]
 ) -> int:
@@ -295,6 +213,76 @@ class MonitoringEntry:
         if key == "game_total":
             return self.game_total
         raise KeyError(key)
+
+
+
+@dataclass
+class HumanMonitoringRow:
+    name_or_id: str
+    week_activity: int
+    total_activity: int
+    tournament_activity: int
+    tournament_total: int
+
+
+def looks_like_human_monitoring_list(text: str) -> bool:
+    """Detect the five-column human monitoring list without stealing normal chat."""
+    lines = [line.strip() for line in (text or "").splitlines() if line.strip()]
+    if not lines:
+        return False
+    header = " ".join(lines[:2]).lower()
+    header_markers = ("name/id", "name / id", "акт", "неделя", "тур")
+    header_hint = sum(1 for marker in header_markers if marker in header) >= 2
+    row_pattern = re.compile(r"^(.+?)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$")
+    row_count = sum(bool(row_pattern.match(line)) for line in lines)
+    # With a recognizable header one valid row is enough; without a header,
+    # require at least two identical five-number rows to avoid false positives.
+    return header_hint and row_count >= 1 or row_count >= 2
+
+
+def parse_human_monitoring_list(text: str):
+    """Parse the user-friendly activity list used by the monitoring screenshots.
+
+    Accepted row:
+      Vavix m? 3829 39000 260 780
+
+    Columns:
+      name/ID | weekly activity | total activity | tournament activity | tournament total
+
+    Total/tournament totals are informational; only weekly activity is written
+    to the weekly snapshot by the bot. This preserves the existing lifetime
+    and coin safety rules.
+    """
+    if not looks_like_human_monitoring_list(text):
+        return [], []
+    rows = []
+    errors = []
+    lines = [line.strip() for line in (text or "").splitlines() if line.strip()]
+    row_pattern = re.compile(r"^(.+?)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$")
+    for idx, line in enumerate(lines, start=1):
+        low = line.lower()
+        if ("name/id" in low or "name / id" in low or ("акт" in low and "тур" in low)) and not row_pattern.match(line):
+            continue
+        match = row_pattern.match(line)
+        if not match:
+            errors.append(f"Строка {idx}: не распознана как строка мониторинга.")
+            continue
+        name_or_id = match.group(1).strip()
+        if not name_or_id:
+            errors.append(f"Строка {idx}: пустой name/ID.")
+            continue
+        try:
+            values = [int(match.group(i).replace(" ", "")) for i in range(2, 6)]
+        except ValueError:
+            errors.append(f"Строка {idx}: неверные числовые значения.")
+            continue
+        if any(v < 0 for v in values):
+            errors.append(f"Строка {idx}: значения не могут быть отрицательными.")
+            continue
+        rows.append(HumanMonitoringRow(name_or_id, *values))
+    if not rows:
+        errors.append("В списке не найдено ни одной строки игрока.")
+    return rows, errors
 
 
 def parse_monitoring_text(text: str):

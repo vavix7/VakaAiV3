@@ -1,0 +1,55 @@
+Vaka V8.0.1 — Release Verification
+
+Changes in this maintenance release:
+- Fixed Participant Panel -> 🏆 Рейтинг callback crash.
+  Root cause: weekly-player query did not include players.total_activity,
+  while the rating renderer accessed that field.
+- /ff now sends the SiamBhau generated profile banner after the text profile.
+- /ff now exposes additional non-secret FreeFireInfo fields when present:
+  max ranks, badge count, pin, release version, title, banner/headPic IDs,
+  pet info, social signature/language/gender and credit score.
+- /ffoutfit UID added for the SiamBhau 1024x1024 outfit renderer.
+- Guild member/capacity merge no longer overwrites valid FreeFireInfo values
+  with zero values from a partial guild response.
+- Supplied guild_activity(3).db data was merged into the release DB while
+  preserving release-only schema tables (guild_applications, kv_matches,
+  marriages, rp_actions).
+
+Verification:
+- python -m pytest -q: 3 passed
+- python -m compileall -q .: passed
+- SQLite PRAGMA integrity_check: ok
+- Rating query smoke test: passed; total_activity field present
+- ZIP integrity test: passed after packaging
+
+API configuration:
+- Base URL: https://siambhau69.eu.cc
+- Default region: BD
+- IND fallback for player profile/stat requests
+- Premium key must be supplied locally in .env as FF_API_KEY.
+
+
+V8.1.12 UNIFIED PANEL ADDITIONS
+- Guest panel: registration, guild application questionnaire, KV proposal, guild rules, KV rules, help/about.
+- Main participant panel: separate guild rules and KV rules buttons.
+- Admin panel access: explicit three-admin allowlist (ranks 6–8).
+- Guild application storage: why_join, how_found, extra_info, review_note (additive migration).
+- KV storage: rules_accepted, proposer_guild, proposer_note (additive migration).
+- Existing RP_ACTIONS, RP_ALIASES, IRIS_EXTRA_RP and 18+ entries preserved.
+- RP fallback is delegated before generic text handling so actions are not swallowed.
+- Rules images are bundled under assets/.
+
+CURRENT MAINTENANCE CHECK — 2026-08-30
+- /ff rebuilt as a human-readable card matching the requested layout.
+- /ff sends SiamBhau /banner/profile PNG BEFORE the text card.
+- /ff always displays region as 🇷🇺 Россия; API request region remains configurable.
+- Guild level merge rejects invalid values outside 1..7, so an API value such as 50 cannot overwrite a valid clanBasicInfo level.
+- /ff no longer exposes raw Title/HeadPic/Banner IDs, pet skin/skill IDs or raw enum strings; social data is translated to ordinary Russian labels.
+- Google Drive button `owner_drive_backups` is now implemented; manual upload of the latest local backup is supported.
+- Google OAuth uses the configured Desktop/Installed App JSON and can reconnect from an existing token.json on a headless host.
+- Added missing google-auth-oauthlib and google-auth-httplib2 dependencies.
+- Human 5-column monitoring list is recognized and imported into the current week without changing lifetime activity or coins.
+- Example human list verified: Vavix m? / churka / 62839364 with 5 numeric columns.
+- Python AST syntax check: passed.
+- Release verification: passed.
+- SQLite integrity check: passed.

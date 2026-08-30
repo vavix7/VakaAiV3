@@ -58,7 +58,7 @@ from parser import (
     ActivityEntry,
     format_number,
     parse_activity_text,
-    total_activity, parse_monitoring_text, parse_human_monitoring_text, MonitoringEntry
+    total_activity, parse_monitoring_text, looks_like_human_monitoring_list, parse_human_monitoring_list, MonitoringEntry
 )
 from scheduler import WeeklyScheduler
 from google_drive_backup import GoogleDriveBackup
@@ -1349,6 +1349,112 @@ async def send_player_profile(chat_id: int, player_id: str, edit_message=None):
 
 # ----- FF -----
 
+# Free Fire XP thresholds (cumulative account EXP). The table matches the
+# published Free Fire level progression and lets /ff show real progress to the
+# next level instead of inventing a percentage from the current level alone.
+FF_XP_LEVELS = {
+    1: 0, 2: 48, 3: 202, 4: 544, 5: 1012, 6: 1844, 7: 2792, 8: 3800,
+    9: 4870, 10: 6004, 11: 7192, 12: 8448, 13: 9760, 14: 11140,
+    15: 12566, 16: 14060, 17: 15610, 18: 17224, 19: 18902, 20: 20632,
+    21: 22424, 22: 24278, 23: 26192, 24: 28166, 25: 30200, 26: 32294,
+    27: 34448, 28: 37804, 29: 41274, 30: 44870, 31: 48582, 32: 53394,
+    33: 58566, 34: 64096, 35: 69994, 36: 76260, 37: 83506, 38: 91128,
+    39: 99322, 40: 108092, 41: 120144, 42: 133266, 43: 147472, 44: 162760,
+    45: 179126, 46: 196572, 47: 215368, 48: 235316, 49: 257010, 50: 279860,
+    51: 304056, 52: 348318, 53: 394982, 54: 444044, 55: 495508, 56: 549364,
+    57: 633756, 58: 721744, 59: 813336, 60: 908522, 61: 1041438,
+    62: 1180352, 63: 1325266, 64: 1476184, 65: 1634300, 66: 1840946,
+    67: 2056594, 68: 2281242, 69: 2514880, 70: 2757530, 71: 3059506,
+    72: 3372284, 73: 3699456, 74: 4041030, 75: 4397002, 76: 4829104,
+    77: 5282204, 78: 5756304, 79: 6251404, 80: 6767502, 81: 7381324,
+    82: 8043154, 83: 8752982, 84: 9510808, 85: 10316638, 86: 11277190,
+    87: 12291748, 88: 13360304, 89: 14482858, 90: 15659418, 91: 17026708,
+    92: 18453990, 93: 19941280, 94: 21488570, 95: 23095858, 96: 24763138,
+    97: 26490428, 98: 28277708, 99: 30124996, 100: 32032284,
+}
+
+
+def ff_level_progress(level: int, exp: int) -> tuple[int, int, float, int, str] | None:
+    """Return (current_level_start, next_level_total, percent, remaining, bar)."""
+    try:
+        level = int(level)
+        exp = max(0, int(exp))
+    except (TypeError, ValueError):
+        return None
+    current_start = FF_XP_LEVELS.get(level)
+    next_total = FF_XP_LEVELS.get(level + 1)
+    if current_start is None or next_total is None or next_total <= current_start:
+        return None
+    earned = max(0, min(exp - current_start, next_total - current_start))
+    needed = next_total - current_start
+    percent = earned / needed * 100
+    remaining = max(0, next_total - exp)
+    filled = max(0, min(10, int(round(percent / 10))))
+    bar = "█" * filled + "░" * (10 - filled)
+    return current_start, next_total, percent, remaining, bar
+
+
+def _ff_human_gender(value: str) -> str:
+    key = str(value or "").upper()
+    return {"GENDER_MALE": "👨 Мужской", "GENDER_FEMALE": "👩 Женский"}.get(key, "⚪ Не указан")
+
+
+def _ff_human_language(value: str) -> str:
+    key = str(value or "").upper()
+    names = {
+        "LANGUAGE_RUSSIAN": "🇷🇺 Русский", "LANGUAGE_ENGLISH": "🇬🇧 Английский",
+        "LANGUAGE_BENGALI": "🇧🇩 Бенгальский", "LANGUAGE_HINDI": "🇮🇳 Хинди",
+        "LANGUAGE_PORTUGUESE": "🇧🇷 Португальский", "LANGUAGE_SPANISH": "🇪🇸 Испанский",
+        "LANGUAGE_TURKISH": "🇹🇷 Турецкий", "LANGUAGE_ARABIC": "🇸🇦 Арабский",
+    }
+    return names.get(key, "🌐 Не указан")
+
+
+def _ff_clean_description(value: str) -> str:
+    text = str(value or "").replace("\\n", "\n")
+    text = re.sub(r"\[[0-9A-Fa-f]{6}\]", "", text)
+    text = re.sub(r"\[(?:b|i|u|s|c)\]", "", text, flags=re.I)
+    return text.strip() or "—"
+
+
+def _ff_date_only(value: str) -> str:
+    value = str(value or "Неизвестно")
+    return value.split(" ", 1)[0] if value != "Неизвестно" else value
+
+
+def _ff_last_login(value: str) -> str:
+    value = str(value or "Неизвестно")
+    if value == "Неизвестно":
+        return value
+    parts = value.split(" ", 1)
+    return f"{parts[0]} в {parts[1]}" if len(parts) == 2 else value
+
+
+def _ff_ban_line(ban: dict | None) -> str:
+    if not isinstance(ban, dict):
+        return "⚪ НЕ УДАЛОСЬ ПРОВЕРИТЬ"
+    status = str(ban.get("ban_status") or ban.get("status") or "").strip()
+    low = status.lower()
+    if not status:
+        return "⚪ НЕ УДАЛОСЬ ПРОВЕРИТЬ"
+    if "not banned" in low or "не забан" in low or low in {"ok", "active"}:
+        return "🟢 НЕ ЗАБАНЕН"
+    period = ban.get("ban_period")
+    if period:
+        return f"🔴 ЗАБАНЕН — {period}"
+    return "🔴 ЗАБАНЕН"
+
+
+def _ff_social_footer() -> str:
+    return (
+        "📢 НАШИ СОЦСЕТИ\n"
+        "├ 🤖 Бот: @Nadzo69rBot\n"
+        "├ 💬 Чат: @nadzor67\n"
+        "├ 📰 Новости: @ndzorsh\n"
+        "└ 🎵 TikTok: @nadzor_sh"
+    )
+
+
 @dp.message(Command("ff"))
 async def command_ff(message: Message):
     parts = (message.text or "").split()
@@ -1364,15 +1470,15 @@ async def command_ff(message: Message):
         await message.answer("❌ UID должен содержать от 8 до 15 цифр.")
         return
 
-    loading = await message.answer(f"⏳ Получаю полную информацию SiamBhau...\n\nUID: <code>{uid}</code>")
+    loading = await message.answer(f"⏳ Получаю профиль Free Fire...\n\nUID: <code>{uid}</code>")
 
     try:
         profile = await ff_client.get_player_profile(uid, FF_REGION)
-    except ValueError as e:
-        await loading.edit_text(f"❌ <b>Ошибка</b>\n\n{html.escape(str(e))}")
+    except ValueError as exc:
+        await loading.edit_text(f"❌ <b>Ошибка</b>\n\n{html.escape(str(exc))}")
         return
-    except Exception as e:
-        logger.exception("Ошибка /ff: %s", e)
+    except Exception:
+        logger.exception("Ошибка /ff: %s", uid)
         await loading.edit_text("⚠️ <b>SiamBhau API временно недоступен.</b>\n\nПопробуй ещё раз позже.")
         return
 
@@ -1381,127 +1487,132 @@ async def command_ff(message: Message):
         return
 
     actual_region = (profile.region or FF_REGION).upper()
+    try:
+        full = await ff_client.get_full_player_data(uid, actual_region) or {}
+    except Exception:
+        logger.exception("Extended /ff lookup failed for %s", uid)
+        full = {}
+
+    br = full.get("br_stats") if isinstance(full, dict) else None
+    cs = full.get("cs_stats") if isinstance(full, dict) else None
+    ban = full.get("ban") if isinstance(full, dict) else None
+    br_stats = br.get("stats") if isinstance(br, dict) else None
+    cs_stats = cs.get("stats") if isinstance(cs, dict) else None
+
+    # IMPORTANT: display region is intentionally fixed to Russia as requested,
+    # while the API request still uses the actual configured/returned region.
+    region_display = "🇷🇺 Россия"
+    progress = ff_level_progress(profile.level, profile.exp)
     lines = [
-        "🎮 <b>ПРОФИЛЬ FREE FIRE</b>",
+        "╔══════════════════════╗",
+        "║  🔥 FREE FIRE INFO  ║",
+        "╚══════════════════════╝",
+        "┌─ 👤 ОСНОВНОЕ",
+        f"├ Ник: {profile.nickname}",
+        f"├ UID: {profile.uid}",
+        f"├ Уровень: {profile.level} | Опыт: {format_number(profile.exp)}",
+        "├",
+    ]
+    if progress:
+        _, next_total, percent, remaining, bar = progress
+        lines += [
+            "├ 📊 ПРОГРЕСС УРОВНЯ:",
+            f"├ До {profile.level + 1} ур: [{bar}] {percent:.1f}%",
+            f"├ Осталось: {format_number(remaining)} EXP",
+            "├",
+        ]
+    lines += [
+        f"├ Регион: {region_display}",
+        f"├ Ранг {profile.rank_br} | {format_number(profile.rank_br_points)} очков",
+        f"├ Ранг {profile.rank_cs} CS | {format_number(profile.rank_cs_points)} очков",
+        f"├ ❤️ Лайков: {format_number(profile.likes)}",
+        f"├ ⭐️ Доверие: {profile.credit_score or '—'}/100",
+        f"├ 📆 Создан: {_ff_date_only(profile.created_at)}",
+        f"├ 🕐 Был в сети: {_ff_last_login(profile.last_login)}",
+        "├",
+        "├ 🚫 СТАТУС БАНА:",
+        f"├ {_ff_ban_line(ban)}",
         "",
-        f"👤 Ник: <b>{html.escape(profile.nickname)}</b>",
-        f"🆔 UID: <code>{profile.uid}</code>",
-        f"🏅 Уровень: <b>{profile.level}</b>",
-        f"🌍 Регион: <b>{actual_region}</b>",
-        f"❤️ Лайки: <b>{format_number(profile.likes)}</b>",
-        f"⭐ BR Ранг: <b>{profile.rank_br}</b> ({format_number(profile.rank_br_points)} очков)",
-        f"⭐ CS Ранг: <b>{profile.rank_cs}</b> ({format_number(profile.rank_cs_points)} очков)",
+        "┌─ 🏰 ГИЛЬДИЯ",
     ]
 
     if profile.guild_name:
-        lines.extend([
-            "",
-            f"🏰 Гильдия: <b>{html.escape(profile.guild_name)}</b>",
-            f"🆔 ID гильдии: <code>{profile.guild_id or '—'}</code>",
-            f"📊 Участников: <b>{profile.guild_members}/{profile.guild_capacity or '—'}</b>",
-            f"🏅 Уровень гильдии: <b>{profile.guild_level or '—'}</b>",
-        ])
+        guild_level = profile.guild_level if 1 <= int(profile.guild_level or 0) <= 7 else None
+        level_text = f"Ур.{guild_level}" if guild_level else "уровень не определён"
+        member_text = f"{profile.guild_members}/{profile.guild_capacity}" if profile.guild_capacity else str(profile.guild_members or "—")
+        lines += [
+            f"├ {profile.guild_name} | {level_text}",
+            f"├ Игроков: {member_text}",
+        ]
+    else:
+        lines.append("├ Нет гильдии")
+    lines.append("└───────────────────────")
 
-    lines.extend([
+    social_signature = _ff_clean_description(profile.social_signature)
+    lines += [
         "",
-        f"📅 Создан: <b>{html.escape(profile.created_at)}</b>",
-        f"🕐 Последний вход: <b>{html.escape(profile.last_login)}</b>",
-    ])
+        "┌─ 💬 О СЕБЕ",
+        f"├ Пол: {_ff_human_gender(profile.social_gender)}",
+        f"├ Язык: {_ff_human_language(profile.social_language)}",
+        f"├ Описание: {social_signature}",
+        "└───────────────────────",
+        "",
+        "┌─ 🐾 ПИТОМЕЦ",
+    ]
+    if profile.pet_id:
+        pet_level = profile.pet_level or "—"
+        lines.append(f"├ ID: {profile.pet_id} | Ур: {pet_level}")
+    else:
+        lines.append("├ Нет выбранного питомца")
+    lines += [
+        "└───────────────────────",
+    ]
 
-    # FreeFireInfo exposes more than the short profile fields above. Show the
-    # useful non-secret fields directly in /ff so the Premium response is not
-    # unnecessarily discarded.
-    basic = profile.raw_data.get("basicInfo") or profile.raw_data.get("basicinfo") or {}
-    social = profile.raw_data.get("socialInfo") or {}
-    pet = profile.raw_data.get("petInfo") or {}
-    credit = profile.raw_data.get("creditScoreInfo") or {}
-    if basic:
-        extra = []
-        for label, key in (("🎖 Макс. BR", "maxRank"), ("🎖 Макс. CS", "csMaxRank"),
-                           ("🏅 Значков", "badgeCnt"), ("🎯 Pin", "pinId"),
-                           ("📱 Версия", "releaseVersion"), ("🏷 Title", "title"),
-                           ("🖼 Banner ID", "bannerId"), ("🧑 HeadPic ID", "headPic")):
-            value = basic.get(key)
-            if value not in (None, "", 0, "0"):
-                extra.append(f"{label}: <code>{html.escape(str(value))}</code>")
-        if extra:
-            lines.extend(["", "🔎 <b>ДОПОЛНИТЕЛЬНЫЕ ДАННЫЕ</b>", *extra])
-    if pet:
-        pet_parts = []
-        for label, key in (("ID", "id"), ("уровень", "level"), ("skin", "skinId"), ("skill", "selectedSkillId")):
-            value = pet.get(key)
-            if value not in (None, ""):
-                pet_parts.append(f"{label}: {value}")
-        if pet_parts:
-            lines.append("🐾 Питомец: <b>" + html.escape(", ".join(pet_parts)) + "</b>")
-    if social:
-        signature = social.get("signature")
-        language = social.get("language")
-        gender = social.get("gender")
-        if signature or language or gender:
-            lines.append(f"💬 Соц. профиль: {html.escape(str(signature or '—'))}")
-            if language:
-                lines.append(f"🌐 Язык: <code>{html.escape(str(language))}</code>")
-            if gender:
-                lines.append(f"⚧ Пол: <code>{html.escape(str(gender))}</code>")
-    if credit:
-        score = credit.get("creditScore")
-        if score is not None:
-            lines.append(f"🛡 Credit Score: <b>{html.escape(str(score))}</b>")
+    # Keep the useful game statistics available without dumping raw JSON IDs.
+    if isinstance(br_stats, dict):
+        lines += [
+            "",
+            "┌─ 📊 BR КАРЬЕРА",
+            f"├ Игр: {format_number(br_stats.get('gamesPlayed', 0))} | Побед: {format_number(br_stats.get('wins', 0))}",
+            f"├ Убийств: {format_number(br_stats.get('kills', 0))} | K/D: {br_stats.get('kd', 0)}",
+            f"├ Побед: {br_stats.get('winRate', 0)}% | Top 10: {format_number(br_stats.get('top10', 0))}",
+            "└───────────────────────",
+        ]
+    if isinstance(cs_stats, dict):
+        lines += [
+            "",
+            "┌─ 🎯 CS RANKED",
+            f"├ Игр: {format_number(cs_stats.get('gamesPlayed', 0))} | Побед: {format_number(cs_stats.get('wins', 0))}",
+            f"├ Убийств: {format_number(cs_stats.get('kills', 0))} | K/D: {cs_stats.get('kd', 0)}",
+            f"├ Побед: {cs_stats.get('winRate', 0)}% | MVP: {format_number(cs_stats.get('mvp', 0))}",
+            "└───────────────────────",
+        ]
 
-    # Premium API: дополнительно получаем карьерные BR/CS stats и ban status.
-    try:
-        full = await ff_client.get_full_player_data(uid, actual_region)
-        if full:
-            br = full.get("br_stats") or {}
-            cs = full.get("cs_stats") or {}
-            ban = full.get("ban") or {}
-            br_stats = br.get("stats") if isinstance(br, dict) else None
-            cs_stats = cs.get("stats") if isinstance(cs, dict) else None
+    lines += ["", _ff_social_footer()]
+    card = "\n".join(lines)
 
-            if isinstance(br_stats, dict):
-                lines.extend([
-                    "",
-                    "📊 <b>BR — КАРЬЕРА</b>",
-                    f"🎯 Игр: <b>{format_number(br_stats.get('gamesPlayed', 0))}</b> | Побед: <b>{format_number(br_stats.get('wins', 0))}</b>",
-                    f"☠️ Kills: <b>{format_number(br_stats.get('kills', 0))}</b> | HS: <b>{format_number(br_stats.get('headshots', 0))}</b>",
-                    f"📈 K/D: <b>{br_stats.get('kd', 0)}</b> | WR: <b>{br_stats.get('winRate', 0)}%</b>",
-                    f"🏆 Top 10: <b>{format_number(br_stats.get('top10', 0))}</b> | Longest: <b>{br_stats.get('longestKill', 0)}</b>",
-                ])
-
-            if isinstance(cs_stats, dict):
-                lines.extend([
-                    "",
-                    "🎯 <b>CS — RANKED</b>",
-                    f"🎯 Игр: <b>{format_number(cs_stats.get('gamesPlayed', 0))}</b> | Побед: <b>{format_number(cs_stats.get('wins', 0))}</b>",
-                    f"☠️ Kills: <b>{format_number(cs_stats.get('kills', 0))}</b> | HS: <b>{format_number(cs_stats.get('headshots', 0))}</b>",
-                    f"📈 K/D: <b>{cs_stats.get('kd', 0)}</b> | WR: <b>{cs_stats.get('winRate', 0)}%</b>",
-                    f"🏆 MVP: <b>{format_number(cs_stats.get('mvp', 0))}</b>",
-                ])
-
-            if isinstance(ban, dict):
-                ban_status = ban.get("ban_status") or ban.get("status") or "Неизвестно"
-                lines.extend(["", f"🛡 <b>Ban Check:</b> {html.escape(str(ban_status))}"])
-    except Exception:
-        logger.exception("Extended /ff lookup failed for %s", uid)
-
-    await loading.edit_text("\n".join(lines))
-
-    # SiamBhau /banner/profile returns a real PNG. Send it as a Telegram photo
-    # after the text profile; if the renderer is temporarily unavailable, the
-    # profile itself still succeeds.
+    # The banner is generated by SiamBhau's /banner/profile endpoint. It is
+    # intentionally sent FIRST, then the human-readable card below it.
     try:
         banner = await ff_client.get_banner(uid, actual_region)
-        if banner:
-            await message.answer_photo(
-                BufferedInputFile(banner, filename=f"ff_banner_{uid}.png"),
-                caption=f"🖼 <b>ПРОФИЛЬНЫЙ БАННЕР</b>\n🎮 {html.escape(profile.nickname)}\n🆔 <code>{uid}</code>"
-            )
-        else:
-            await message.answer("⚠️ Профиль получен, но SiamBhau не вернул баннер для этого UID.")
     except Exception:
         logger.exception("Banner lookup failed for %s", uid)
-        await message.answer("⚠️ Профиль получен, но баннер сейчас недоступен.")
+        banner = None
+
+    try:
+        await loading.delete()
+    except Exception:
+        pass
+
+    if banner:
+        await message.answer_photo(
+            BufferedInputFile(banner, filename=f"ff_banner_{uid}.png"),
+            caption=f"🔥 <b>FREE FIRE INFO</b>\n🎮 {html.escape(profile.nickname)}\n🆔 <code>{uid}</code>",
+        )
+    else:
+        logger.warning("SiamBhau banner unavailable for %s", uid)
+
+    await message.answer(f"<pre>{html.escape(card)}</pre>")
 
 
 # ----- REGISTER (с сокращением /reg) -----
@@ -4328,6 +4439,82 @@ async def answer_vaka_question(message: Message, question: str):
 async def handle_monitoring_payload(message: Message, text: str):
     if message.chat.id != MONITORING_CHAT_ID:
         return False
+
+    # Human monitoring list from screenshots/ADB reports:
+    #   Vavix m? 3829 39000 260 780
+    # The strict VAKA_MONITORING_V1 protocol remains supported unchanged.
+    if looks_like_human_monitoring_list(text) and not (text or "").strip().startswith("VAKA_MONITORING_V1"):
+        rows, human_errors = parse_human_monitoring_list(text)
+        current_start, current_end = get_default_week()
+        entries = []
+        unresolved = []
+        for row in rows:
+            token = row.name_or_id.strip()
+            if token.isdigit():
+                player_id = token
+                player = db.get_player(player_id)
+                nick = player["nick"] if player else token
+            else:
+                player = db.get_player_by_nick(token)
+                if not player:
+                    unresolved.append(token)
+                    continue
+                player_id = str(player["player_id"])
+                nick = str(player["nick"] or token)
+            entries.append(MonitoringEntry(player_id, nick, row.week_activity, row.total_activity))
+
+        errors = list(human_errors)
+        if unresolved:
+            errors.append("Не найден UID для: " + ", ".join(unresolved[:10]) + ". Используй UID вместо ника или сначала зарегистрируй игрока.")
+        if errors:
+            await message.answer("❌ <b>Ошибка списка мониторинга</b>\n\n" + "\n".join(f"• {html.escape(e)}" for e in errors[:10]))
+            return True
+        if not entries:
+            await message.answer("❌ <b>Список мониторинга пуст.</b>")
+            return True
+
+        try:
+            result = db.save_monitoring_snapshot(current_start.isoformat(), current_end.isoformat(), entries)
+            total = sum(e.activity for e in entries)
+            tournament_rows = len(rows)
+            db.log("human_monitoring_list", message.from_user.id, {
+                "chat_id": message.chat.id,
+                "week_start": current_start.isoformat(),
+                "players": len(entries),
+                "tournament_columns": tournament_rows,
+            })
+            for pid, previous, current, reason in result["anomalies"]:
+                db.add_anticheat_event(current_start.isoformat(), pid, previous, current, reason)
+                p = db.get_player(pid)
+                if OWNER_ID and p:
+                    try:
+                        await bot.send_message(
+                            OWNER_ID,
+                            f"🧠 <b>АНТИНАКРУТКА</b>\n\n"
+                            f"👤 {html.escape(p['nick'])}\n"
+                            f"📅 {format_date(current_start.isoformat())}\n"
+                            f"📉 Было: {format_number(previous)}\n"
+                            f"📈 Стало: {format_number(current)}\n"
+                            f"⚠️ {html.escape(reason)}"
+                        )
+                    except Exception:
+                        logger.exception("Не удалось отправить anti-cheat уведомление для human list")
+            reply = (
+                "✅ <b>СПИСОК АКТИВНОСТИ РАСПОЗНАН</b>\n\n"
+                f"📅 Неделя: <code>{current_start.isoformat()}</code>\n"
+                f"👥 Игроков: <b>{len(entries)}</b>\n"
+                f"🔥 Акт. за неделю: <b>{format_number(total)}</b>\n\n"
+                "ℹ️ Бот распознал 5 колонок: имя/UID → актив за неделю → актив всего → тур за неделю → тур всего.\n"
+                "В расчёт недели записан только «Акт неделя». Остальные значения сохранены как справочные и не увеличивают lifetime/коины."
+            )
+            if result["anomalies"]:
+                reply += f"\n\n🧠 Аномалий: <b>{len(result['anomalies'])}</b> — уведомление отправлено владельцу."
+            await message.answer(reply)
+        except Exception as exc:
+            logger.exception("Ошибка сохранения human monitoring list")
+            await message.answer(f"❌ Список не сохранён: {html.escape(str(exc))}")
+        return True
+
     week_start, entries, tournaments, errors = parse_monitoring_text(text)
     if errors:
         await message.answer("❌ <b>Ошибка мониторинга</b>\n\n" + "\n".join(f"• {html.escape(e)}" for e in errors[:10]))
@@ -4446,113 +4633,6 @@ async def _run_rp(message, action, target):
         emoji, verb = RP_EMOJI.get(action, "✨"), entry
     await message.answer(f"{emoji} | {mention_user(message.from_user.id,message.from_user.full_name)} {verb} {mention_user(target.id,target.full_name)}")
     db.log_rp_action(message.from_user.id,target.id,action)
-
-
-
-async def handle_human_monitoring_payload(message: Message, text: str):
-    """Accept the explicit compact activity list without changing V1."""
-    if message.chat.id != MONITORING_CHAT_ID:
-        await message.answer("🔒 Этот формат принимается только в чате мониторинга.")
-        return True
-
-    entries, errors = parse_human_monitoring_text(text)
-    if errors:
-        await message.answer(
-            "❌ <b>Ошибка списка активности</b>\n\n"
-            + "\n".join(f"• {html.escape(e)}" for e in errors[:10])
-            + "\n\nℹ️ Используй первую строку: <code>VAKA_ACTIVITY_LIST</code>"
-        )
-        return True
-
-    current_start, current_end = get_default_week()
-    resolved = []
-    unresolved = []
-
-    # Resolve a nickname to the existing Free Fire player ID. Numeric first
-    # fields are treated directly as IDs.
-    for e in entries:
-        pid = e.name_or_id.strip()
-        p = db.get_player(pid) if pid.isdigit() else None
-        if p is None:
-            p = db.get_player_by_nick(pid)
-        if p is not None:
-            pid = str(p["player_id"])
-            nick = str(p["nick"])
-        else:
-            # Keep unknown names importable without inventing a numeric UID.
-            # They remain clearly identifiable and can later be reconciled.
-            nick = e.name_or_id.strip()
-            unresolved.append(nick)
-        resolved.append(
-            MonitoringEntry(
-                player_id=pid,
-                nick=nick,
-                activity=e.week_activity,
-                game_total=e.game_total,
-            )
-        )
-
-    try:
-        result = db.save_monitoring_snapshot(
-            current_start.isoformat(),
-            current_end.isoformat(),
-            resolved,
-        )
-
-        # If an active guild tournament exists, the compact list's
-        # TOURNAMENT_ACTIVITY is its current snapshot. TOURNAMENT_TOTAL is
-        # informational and is shown in the confirmation.
-        active_tournaments = db.get_tournaments(status="active", limit=1)
-        tournament_updates = 0
-        if active_tournaments:
-            tid = int(active_tournaments[0]["tournament_id"])
-            for e in entries:
-                p = db.get_player(e.name_or_id) if e.name_or_id.isdigit() else db.get_player_by_nick(e.name_or_id)
-                if p:
-                    try:
-                        db.set_tournament_points(tid, str(p["player_id"]), e.tournament_activity)
-                        tournament_updates += 1
-                    except Exception as exc:
-                        logger.warning("Не удалось обновить турнир для %s: %s", e.name_or_id, exc)
-
-        db.log("human_monitoring_snapshot", message.from_user.id, {
-            "chat_id": message.chat.id,
-            "week_start": current_start.isoformat(),
-            "players": len(resolved),
-            "unresolved": unresolved,
-            "tournament_updates": tournament_updates,
-        })
-
-        total_week = sum(e.week_activity for e in entries)
-        total_tour = sum(e.tournament_activity for e in entries)
-        reply = (
-            "✅ <b>СПИСОК АКТИВНОСТИ ПРИНЯТ</b>\n\n"
-            f"📅 Неделя: <code>{current_start.isoformat()}</code>\n"
-            f"👥 Игроков: <b>{len(entries)}</b>\n"
-            f"🔥 Акт. неделя: <b>{format_number(total_week)}</b>\n"
-            f"🏆 Тур. акт: <b>{format_number(total_tour)}</b>\n"
-            f"📊 Сохранено: <b>{result['updated']}</b>\n"
-        )
-        if active_tournaments:
-            reply += f"🎯 Обновлён турнир: <b>#{int(active_tournaments[0]['tournament_id'])}</b> ({tournament_updates} игроков)\n"
-        else:
-            reply += "🎯 Активного турнира в базе нет — турнирные значения сохранены только в отчёте.\n"
-        if unresolved:
-            reply += "\n⚠️ Не сопоставлены с базой:\n" + "\n".join(
-                f"• {html.escape(x)}" for x in unresolved[:10]
-            )
-        if result["anomalies"]:
-            reply += f"\n\n🧠 Аномалий: <b>{len(result['anomalies'])}</b>"
-        await message.answer(reply)
-    except Exception as exc:
-        logger.exception("Ошибка импорта компактного списка активности")
-        await message.answer(f"❌ <b>Не удалось сохранить список:</b>\n<code>{html.escape(str(exc))}</code>")
-    return True
-
-
-@dp.message(F.text.regexp(r"^(?:VAKA_ACTIVITY_LIST|СПИСОК АКТИВНОСТИ)(?:\s|$)", flags=re.I | re.M))
-async def human_monitoring_message_handler(message: Message):
-    await handle_human_monitoring_payload(message, message.text or "")
 
 
 @dp.message(F.text.regexp(r"^VAKA_MONITORING_V1(?:\s|$)", flags=re.I | re.M))
@@ -6224,6 +6304,73 @@ async def callback_owner_backup_list(callback: CallbackQuery):
     await callback.answer()
 
 
+@dp.callback_query(F.data == "owner_drive_backups")
+async def callback_owner_drive_backups(callback: CallbackQuery):
+    """Open the Google Drive backup panel and verify OAuth on demand."""
+    if not owner_only(callback.from_user.id):
+        await callback.answer("🔒 Только владелец.", show_alert=True)
+        return
+    try:
+        rows = gdrive.list_backups(limit=20)
+        lines = ["☁️ <b>GOOGLE DRIVE</b>", ""]
+        lines.append(f"🔐 OAuth JSON: <code>{html.escape(str(gdrive.credentials_path()))}</code>")
+        lines.append(f"🎫 Token: <code>{html.escape(str(gdrive.token_path()))}</code>")
+        lines.append("")
+        if rows:
+            lines.append(f"📦 Облачных копий: <b>{len(rows)}</b>")
+            for i, row in enumerate(rows[:10], 1):
+                name = html.escape(str(row.get("name") or "без имени"))
+                size = row.get("size")
+                try:
+                    size_mb = int(size) / 1024 / 1024 if size else 0
+                    size_text = f" — {size_mb:.2f} MB"
+                except (TypeError, ValueError):
+                    size_text = ""
+                lines.append(f"{i}. <code>{name}</code>{size_text}")
+        else:
+            lines.append("📭 Облачных копий пока нет или Google Drive ещё не авторизован.")
+        markup = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="☁️ Загрузить последнюю", callback_data="owner_drive_upload_latest")],
+            [InlineKeyboardButton(text="🔄 Обновить", callback_data="owner_drive_backups")],
+            [InlineKeyboardButton(text="⬅️ Назад", callback_data="owner_backups")],
+        ])
+        await safe_edit(callback.message, "\n".join(lines), reply_markup=markup)
+        await callback.answer("Google Drive обновлён")
+    except Exception as exc:
+        logger.exception("Google Drive panel failed")
+        await safe_edit(
+            callback.message,
+            "☁️ <b>GOOGLE DRIVE</b>\n\n"
+            f"❌ Не удалось открыть Google Drive: <code>{html.escape(str(exc))}</code>\n\n"
+            f"OAuth JSON: <code>{html.escape(str(gdrive.credentials_path()))}</code>",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="🔄 Повторить", callback_data="owner_drive_backups")],
+                [InlineKeyboardButton(text="⬅️ Назад", callback_data="owner_backups")],
+            ]),
+        )
+        await callback.answer("Ошибка Google Drive", show_alert=True)
+
+
+@dp.callback_query(F.data == "owner_drive_upload_latest")
+async def callback_owner_drive_upload_latest(callback: CallbackQuery):
+    if not owner_only(callback.from_user.id):
+        await callback.answer("🔒 Только владелец.", show_alert=True)
+        return
+    files = backup_files()
+    if not files:
+        await callback.answer("Локальных копий пока нет.", show_alert=True)
+        return
+    try:
+        ok = gdrive.upload(files[0], keep=GOOGLE_DRIVE_BACKUP_COUNT)
+        if not ok:
+            raise RuntimeError("Google Drive не подтвердил загрузку")
+        await callback_owner_drive_backups(callback)
+    except Exception as exc:
+        logger.exception("Google Drive manual upload failed")
+        await callback.answer("Ошибка загрузки", show_alert=True)
+        await callback.message.answer(f"❌ Google Drive: <code>{html.escape(str(exc))}</code>")
+
+
 def backup_restore_keyboard(files):
     rows = [
         [InlineKeyboardButton(
@@ -6234,56 +6381,6 @@ def backup_restore_keyboard(files):
     ]
     rows.append([InlineKeyboardButton(text="⬅️ Назад", callback_data="owner_backups")])
     return InlineKeyboardMarkup(inline_keyboard=rows)
-
-
-@dp.callback_query(F.data == "owner_drive_backups")
-async def callback_owner_drive_backups(callback: CallbackQuery):
-    """Show Google Drive backups and allow a manual refresh/upload."""
-    if not owner_only(callback.from_user.id):
-        await callback.answer("🔒 Только владелец.", show_alert=True)
-        return
-
-    try:
-        if not GOOGLE_DRIVE_BACKUP_ENABLED:
-            await callback.answer("Google Drive отключён в настройках.", show_alert=True)
-            return
-
-        remote = gdrive.list_backups(limit=20)
-        if not remote:
-            text = (
-                "☁️ <b>GOOGLE DRIVE</b>\n\n"
-                "Сохранённых копий пока нет.\n"
-                "Нажми «💾 Создать и отправить», чтобы создать новую копию."
-            )
-        else:
-            out = ["☁️ <b>GOOGLE DRIVE — КОПИИ</b>", ""]
-            for i, item in enumerate(remote, 1):
-                name = html.escape(str(item.get("name", "без имени")))
-                size = item.get("size")
-                try:
-                    size_mb = int(size) / 1024 / 1024 if size else 0
-                    size_text = f" — {size_mb:.2f} MB" if size else ""
-                except (TypeError, ValueError):
-                    size_text = ""
-                created = html.escape(str(item.get("createdTime", ""))[:19].replace("T", " "))
-                out.append(f"{i}. <code>{name}</code>{size_text}")
-                if created:
-                    out.append(f"   🕒 {created}")
-            text = "\n".join(out)
-
-        kb = InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton(text="🔄 Обновить список", callback_data="owner_drive_backups")],
-            [InlineKeyboardButton(text="💾 Создать новый бэкап", callback_data="owner_backup_create")],
-            [InlineKeyboardButton(text="⬅️ Назад", callback_data="owner_backups")],
-        ])
-        await safe_edit(callback.message, text, reply_markup=kb)
-        await callback.answer("Google Drive обновлён")
-    except Exception as exc:
-        logger.exception("Ошибка открытия Google Drive")
-        await callback.answer("Ошибка Google Drive", show_alert=True)
-        await callback.message.answer(
-            f"❌ Google Drive: <code>{html.escape(str(exc))}</code>"
-        )
 
 
 @dp.callback_query(F.data == "owner_backup_restore_list")

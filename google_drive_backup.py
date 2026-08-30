@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_CREDENTIALS = BASE_DIR / "credentials.json"
+LEGACY_CREDENTIALS = BASE_DIR / "google_credentials.json"
 DEFAULT_TOKEN = BASE_DIR / "token.json"
 
 
@@ -15,11 +16,13 @@ class GoogleDriveBackup:
     """Google Drive backup using OAuth 2.0 Desktop/Installed App."""
 
     def __init__(self, credentials_file=None, folder_id="", folder_name="Vaka_Data", token_file=None):
-        # IMPORTANT: OAuth credentials are deliberately fixed to the Vaka folder.
-        # This prevents an old/wrong credentials.json from an environment variable
-        # or another working directory from being loaded.
-        self.credentials_file = DEFAULT_CREDENTIALS
-        self.token_file = DEFAULT_TOKEN
+        # Use the explicit path passed by config when it is supplied.  Relative
+        # paths are always resolved from the Vaka project directory, not the
+        # process working directory.  If no path is supplied, credentials.json
+        # is preferred and the historical google_credentials.json name is a
+        # compatibility fallback.
+        self.credentials_file = self._resolve_credentials_path(credentials_file)
+        self.token_file = self._resolve_path(token_file, DEFAULT_TOKEN)
         self.folder_id = str(folder_id or "").strip()
         self.folder_name = str(folder_name or "Vaka_Data").strip() or "Vaka_Data"
         self.service = None
@@ -31,10 +34,24 @@ class GoogleDriveBackup:
         p = Path(str(value))
         return p if p.is_absolute() else BASE_DIR / p
 
+    @classmethod
+    def _resolve_credentials_path(cls, value):
+        if value:
+            return cls._resolve_path(value, DEFAULT_CREDENTIALS)
+        if DEFAULT_CREDENTIALS.exists():
+            return DEFAULT_CREDENTIALS
+        if LEGACY_CREDENTIALS.exists():
+            return LEGACY_CREDENTIALS
+        return DEFAULT_CREDENTIALS
+
 
     def credentials_path(self):
         """Return the exact OAuth JSON path used by Vaka."""
         return self.credentials_file
+
+    def token_path(self):
+        """Return the exact OAuth token path used by Vaka."""
+        return self.token_file
 
     def _ensure(self):
         if self.service is not None:
@@ -47,56 +64,76 @@ class GoogleDriveBackup:
 
             cp = self.credentials_file
             tp = self.token_file
-
-            if not cp.exists():
-                logger.error("Google Drive OAuth недоступен: не найден %s", cp)
-                return None
-
-            try:
-                raw = json.loads(cp.read_text(encoding="utf-8"))
-            except Exception as e:
-                logger.error("Google Drive OAuth: credentials.json повреждён: %s", e)
-                return None
-
-            if "installed" not in raw:
-                logger.error(
-                    "Google Drive OAuth: неверный credentials.json: %s "
-                    "(installed=%s, web=%s)",
-                    cp,
-                    "installed" in raw,
-                    "web" in raw,
-                )
-                return None
-
-            logger.info(
-                "Google Drive OAuth: используем credentials.json: %s (тип=installed)",
-                cp,
-            )
-
             creds = None
+
+            # A previously authorized token is enough to reconnect the bot.
+            # This is important on a headless host where the OAuth browser flow
+            # cannot be opened.  credentials.json is only required when a fresh
+            # authorization is needed.
             if tp.exists():
                 try:
                     creds = Credentials.from_authorized_user_file(str(tp), SCOPES)
-                except Exception:
-                    logger.warning("Google Drive OAuth: token.json не удалось прочитать; повторная авторизация.")
+                except Exception as exc:
+                    logger.warning("Google Drive OAuth: token.json не удалось прочитать; потребуется новая авторизация: %s", exc)
+                    creds = None
 
             if creds and creds.expired and creds.refresh_token:
                 try:
                     creds.refresh(Request())
-                except Exception as e:
-                    logger.warning("Google Drive OAuth: refresh token не сработал: %s", e)
+                except Exception as exc:
+                    logger.warning("Google Drive OAuth: refresh token не сработал: %s", exc)
                     creds = None
 
-            if not creds or not creds.valid:
-                logger.info("🔐 Google Drive: требуется OAuth авторизация. Откроется браузер.")
-                flow = InstalledAppFlow.from_client_secrets_file(str(cp), SCOPES)
-                creds = flow.run_local_server(
-                    host="localhost",
-                    port=0,
-                    access_type="offline",
-                    prompt="consent",
+            if creds and creds.valid:
+                tp.parent.mkdir(parents=True, exist_ok=True)
+                tp.write_text(creds.to_json(), encoding="utf-8")
+                self.service = build("drive", "v3", credentials=creds, cache_discovery=False)
+                logger.info(
+                    "✅ Google Drive OAuth подключён по сохранённому token.json; token=%s",
+                    tp,
                 )
+                return self.service
 
+            if not cp.exists():
+                logger.error(
+                    "Google Drive OAuth недоступен: не найден OAuth JSON %s. "
+                    "Для новой авторизации нужен credentials.json типа Desktop/Installed App.",
+                    cp,
+                )
+                return None
+
+            try:
+                raw = json.loads(cp.read_text(encoding="utf-8"))
+            except Exception as exc:
+                logger.error("Google Drive OAuth: OAuth JSON повреждён: %s", exc)
+                return None
+
+            if "installed" not in raw:
+                logger.error(
+                    "Google Drive OAuth: нужен OAuth JSON типа Desktop/Installed App: %s "
+                    "(installed=%s, web=%s, service_account=%s)",
+                    cp,
+                    "installed" in raw,
+                    "web" in raw,
+                    raw.get("type") == "service_account",
+                )
+                return None
+
+            logger.info(
+                "Google Drive OAuth: используем OAuth JSON: %s (тип=installed)",
+                cp,
+            )
+
+            logger.info("🔐 Google Drive: требуется OAuth авторизация. Откроется браузер.")
+            flow = InstalledAppFlow.from_client_secrets_file(str(cp), SCOPES)
+            creds = flow.run_local_server(
+                host="localhost",
+                port=0,
+                access_type="offline",
+                prompt="consent",
+            )
+
+            tp.parent.mkdir(parents=True, exist_ok=True)
             tp.write_text(creds.to_json(), encoding="utf-8")
             self.service = build("drive", "v3", credentials=creds, cache_discovery=False)
             logger.info(

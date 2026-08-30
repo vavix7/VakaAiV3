@@ -61,9 +61,9 @@ if legacy_admin_id:
 # =========================================================
 
 FF_API_KEY = os.getenv("FF_API_KEY", "").strip()
-FF_REGION = os.getenv("FF_REGION", "BD").strip().upper()
+FF_REGION = os.getenv("FF_REGION", "RU").strip().upper()
 FF_GUILD_ID = os.getenv("FF_GUILD_ID", "3101503290").strip()
-# New Free Fire API. The old SiamBhau endpoint is no longer used.
+# SiamBhau Free Fire API. RU is the default lookup region for this Vaka build.
 FF_API_PROVIDER = "siambhau"
 FF_API_BASE = os.getenv("FF_API_BASE", "https://siambhau69.eu.cc").strip().rstrip("/")
 
@@ -178,7 +178,7 @@ CLEANUP_INTERVAL_HOURS = get_int_env("CLEANUP_INTERVAL_HOURS", 12)
 
 # V2.9 Google Drive backup
 GOOGLE_DRIVE_BACKUP_ENABLED = get_bool_env("GOOGLE_DRIVE_BACKUP_ENABLED", False)
-GOOGLE_DRIVE_CREDENTIALS_FILE = os.getenv("GOOGLE_DRIVE_CREDENTIALS_FILE", "google_credentials.json").strip()
+GOOGLE_DRIVE_CREDENTIALS_FILE = os.getenv("GOOGLE_DRIVE_CREDENTIALS_FILE", "credentials.json").strip()
 GOOGLE_DRIVE_FOLDER_ID = os.getenv("GOOGLE_DRIVE_FOLDER_ID", "").strip()
 GOOGLE_DRIVE_FOLDER_NAME = os.getenv("GOOGLE_DRIVE_FOLDER_NAME", "Vaka_Data").strip()
 GOOGLE_DRIVE_BACKUP_COUNT = get_int_env("GOOGLE_DRIVE_BACKUP_COUNT", 4)

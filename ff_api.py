@@ -35,6 +35,15 @@ class FFPlayerProfile:
     guild_members: int = 0
     guild_capacity: int = 0
     guild_owner: Optional[str] = None
+    banner_id: int = 0
+    headpic_id: int = 0
+    title_id: int = 0
+    social_signature: str = ""
+    social_language: str = ""
+    social_gender: str = ""
+    pet_id: int = 0
+    pet_level: int = 0
+    credit_score: int = 0
     raw_data: dict = field(default_factory=dict)
 
 
@@ -259,10 +268,19 @@ class FreeFireAPI:
             last_login=self._fmt_ts(self._first(basic, "lastLoginAt", "lastloginat")),
             guild_id=str(guild_id) if guild_id else None,
             guild_name=self._first(clan, "clanName", "guildName"),
-            guild_level=int(self._first(clan, "clanLevel", "guildLevel", default=0) or 0),
+            guild_level=(self._valid_guild_level(self._first(clan, "clanLevel", "guildLevel", default=0)) or 0),
             guild_members=int(self._find_member_count(clan) or 0),
             guild_capacity=int(self._find_capacity(clan) or 0),
             guild_owner=str(self._first(clan, "captainId", "ownerId", default="")) or None,
+            banner_id=int(self._first(basic, "bannerId", "bannerid", default=0) or 0),
+            headpic_id=int(self._first(basic, "headPic", "headpic", default=0) or 0),
+            title_id=int(self._first(basic, "title", "titleId", default=0) or 0),
+            social_signature=str(self._first(data.get("socialInfo") or data.get("socialinfo") or {}, "signature", "AccountSignature", default="") or ""),
+            social_language=str(self._first(data.get("socialInfo") or data.get("socialinfo") or {}, "language", "AccountLanguage", default="") or ""),
+            social_gender=str(self._first(data.get("socialInfo") or data.get("socialinfo") or {}, "gender", "Gender", default="") or ""),
+            pet_id=int(self._first(data.get("petInfo") or data.get("petinfo") or {}, "id", "petId", default=0) or 0),
+            pet_level=int(self._first(data.get("petInfo") or data.get("petinfo") or {}, "level", default=0) or 0),
+            credit_score=int(self._first(data.get("creditScoreInfo") or data.get("creditscoreinfo") or {}, "creditScore", "credit_score", default=0) or 0),
             raw_data=data,
         )
 
@@ -326,10 +344,23 @@ class FreeFireAPI:
                     return found
         return None
 
+    @staticmethod
+    def _valid_guild_level(value: Any) -> Optional[int]:
+        try:
+            level = int(value)
+        except (TypeError, ValueError):
+            return None
+        # Current Free Fire guild data uses levels 1..7. SiamBhau can return
+        # unrelated/invalid numeric fields in some guild-info responses; never
+        # let such a value replace a valid clanBasicInfo level.
+        return level if 1 <= level <= 7 else None
+
     def _merge_guild(self, profile: FFPlayerProfile, guild: Dict[str, Any]):
         profile.guild_id = str(self._first(guild, "id", "clanId", "clanID", "guildId", "guildID", default=profile.guild_id))
         profile.guild_name = self._first(guild, "clan_name", "clanName", "guildName", default=profile.guild_name)
-        profile.guild_level = int(self._first(guild, "level", "clanLevel", "guildLevel", default=profile.guild_level) or profile.guild_level or 0)
+        guild_level = self._valid_guild_level(self._first(guild, "level", "clanLevel", "guildLevel", default=None))
+        if guild_level is not None:
+            profile.guild_level = guild_level
 
         # SiamBhau documents memberNum in clanBasicInfo and total_members in
         # guild_details.  We scan the complete response as a safety net so a
