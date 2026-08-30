@@ -1,0 +1,1787 @@
+2026-08-29 01:48:56,764 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-29 01:48:56,764 | INFO | Start polling
+2026-08-29 01:48:57,278 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-29 01:49:06,615 | INFO | Update id=863285643 is handled. Duration 1579 ms by bot id=8928759774
+2026-08-29 01:49:14,753 | INFO | Update id=863285644 is handled. Duration 213 ms by bot id=8928759774
+2026-08-29 01:49:21,362 | INFO | Update id=863285645 is handled. Duration 220 ms by bot id=8928759774
+2026-08-29 01:49:55,927 | INFO | Update id=863285646 is handled. Duration 197 ms by bot id=8928759774
+2026-08-29 01:49:58,772 | INFO | Update id=863285647 is handled. Duration 374 ms by bot id=8928759774
+2026-08-29 01:50:05,308 | INFO | Update id=863285648 is handled. Duration 197 ms by bot id=8928759774
+2026-08-29 01:50:09,088 | INFO | Update id=863285649 is handled. Duration 223 ms by bot id=8928759774
+2026-08-29 01:50:10,701 | INFO | Update id=863285650 is handled. Duration 756 ms by bot id=8928759774
+2026-08-29 01:51:12,354 | INFO | Update id=863285651 is handled. Duration 176 ms by bot id=8928759774
+2026-08-29 01:51:14,497 | INFO | Update id=863285652 is handled. Duration 252 ms by bot id=8928759774
+2026-08-29 01:51:19,013 | INFO | Update id=863285653 is handled. Duration 208 ms by bot id=8928759774
+2026-08-29 01:51:20,418 | INFO | Update id=863285654 is handled. Duration 202 ms by bot id=8928759774
+2026-08-29 03:11:36,832 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-29 03:11:36,832 | INFO | Start polling
+2026-08-29 03:11:37,376 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-29 03:12:35,842 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-29 03:12:35,842 | INFO | Start polling
+2026-08-29 03:12:36,453 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-29 03:12:36,967 | INFO | Update id=863285720 is handled. Duration 431 ms by bot id=8928759774
+2026-08-29 03:12:40,642 | INFO | Update id=863285721 is handled. Duration 203 ms by bot id=8928759774
+2026-08-29 03:12:43,246 | INFO | Update id=863285722 is handled. Duration 236 ms by bot id=8928759774
+2026-08-29 03:12:45,283 | INFO | Update id=863285723 is handled. Duration 243 ms by bot id=8928759774
+2026-08-29 03:12:46,840 | INFO | Update id=863285724 is handled. Duration 245 ms by bot id=8928759774
+2026-08-29 03:12:48,000 | INFO | Update id=863285725 is handled. Duration 237 ms by bot id=8928759774
+2026-08-29 03:12:49,189 | INFO | Update id=863285726 is handled. Duration 202 ms by bot id=8928759774
+2026-08-29 03:12:50,847 | INFO | Update id=863285727 is handled. Duration 194 ms by bot id=8928759774
+2026-08-29 03:13:01,627 | INFO | Update id=863285728 is handled. Duration 195 ms by bot id=8928759774
+2026-08-29 03:13:04,387 | INFO | Update id=863285729 is handled. Duration 292 ms by bot id=8928759774
+2026-08-29 03:13:05,348 | INFO | Update id=863285730 is handled. Duration 209 ms by bot id=8928759774
+2026-08-29 03:13:07,482 | INFO | Update id=863285731 is handled. Duration 204 ms by bot id=8928759774
+2026-08-29 03:13:09,102 | INFO | Update id=863285732 is handled. Duration 208 ms by bot id=8928759774
+2026-08-29 03:13:11,860 | INFO | Update id=863285733 is handled. Duration 226 ms by bot id=8928759774
+2026-08-29 03:13:13,344 | INFO | Update id=863285734 is handled. Duration 198 ms by bot id=8928759774
+2026-08-29 03:13:16,020 | INFO | Update id=863285735 is handled. Duration 226 ms by bot id=8928759774
+2026-08-29 03:13:21,849 | INFO | Update id=863285736 is handled. Duration 258 ms by bot id=8928759774
+2026-08-29 03:13:30,736 | INFO | Update id=863285737 is handled. Duration 324 ms by bot id=8928759774
+2026-08-29 03:13:47,937 | INFO | Update id=863285738 is handled. Duration 2 ms by bot id=8928759774
+2026-08-29 03:13:50,235 | INFO | Update id=863285739 is handled. Duration 129 ms by bot id=8928759774
+2026-08-29 03:13:54,854 | INFO | Update id=863285740 is handled. Duration 246 ms by bot id=8928759774
+2026-08-29 03:14:04,426 | INFO | Update id=863285741 is handled. Duration 2 ms by bot id=8928759774
+2026-08-29 03:14:06,685 | INFO | Update id=863285742 is handled. Duration 124 ms by bot id=8928759774
+2026-08-29 03:14:16,376 | WARNING | Vaka AI provider failed Gemini/gemini-1.5-flash: Gemini: HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "Permission denied: Consumer 'api_key:AQ.Ab8RN6L7con9ej8tRevXCRMhVv7LDKJnAKeB3Z5uOGvoFe7bsw' has been suspended.",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason":
+2026-08-29 03:14:16,700 | WARNING | Vaka AI provider failed Groq/llama-3.3-70b-versatile: Groq: HTTP 404: {"error":{"message":"The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.","type":"invalid_request_error","code":"model_not_found"}}
+
+2026-08-29 03:14:17,748 | INFO | Vaka AI answered with Mistral/mistral-small-latest
+2026-08-29 03:14:17,749 | INFO | Update id=863285743 is handled. Duration 1770 ms by bot id=8928759774
+2026-08-29 03:14:32,920 | WARNING | Vaka AI provider failed Gemini/gemini-1.5-flash: Gemini: HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "Permission denied: Consumer 'api_key:AQ.Ab8RN6L7con9ej8tRevXCRMhVv7LDKJnAKeB3Z5uOGvoFe7bsw' has been suspended.",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason":
+2026-08-29 03:14:33,223 | WARNING | Vaka AI provider failed Groq/llama-3.3-70b-versatile: Groq: HTTP 404: {"error":{"message":"The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.","type":"invalid_request_error","code":"model_not_found"}}
+
+2026-08-29 03:14:36,006 | INFO | Vaka AI answered with Mistral/mistral-small-latest
+2026-08-29 03:14:36,007 | INFO | Update id=863285744 is handled. Duration 3414 ms by bot id=8928759774
+2026-08-29 03:15:12,319 | INFO | Update id=863285745 is handled. Duration 232 ms by bot id=8928759774
+2026-08-29 03:15:30,977 | WARNING | Vaka AI provider failed Gemini/gemini-1.5-flash: Gemini: HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "Permission denied: Consumer 'api_key:AQ.Ab8RN6L7con9ej8tRevXCRMhVv7LDKJnAKeB3Z5uOGvoFe7bsw' has been suspended.",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason":
+2026-08-29 03:15:31,277 | WARNING | Vaka AI provider failed Groq/llama-3.3-70b-versatile: Groq: HTTP 404: {"error":{"message":"The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.","type":"invalid_request_error","code":"model_not_found"}}
+
+2026-08-29 03:15:32,234 | INFO | Vaka AI answered with Mistral/mistral-small-latest
+2026-08-29 03:15:32,234 | INFO | Update id=863285746 is handled. Duration 1628 ms by bot id=8928759774
+2026-08-30 02:10:02,424 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 02:10:02,425 | INFO | Start polling
+2026-08-30 02:10:02,945 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 02:10:16,212 | INFO | Update id=863287187 is handled. Duration 167 ms by bot id=8928759774
+2026-08-30 02:10:20,231 | INFO | Update id=863287188 is handled. Duration 207 ms by bot id=8928759774
+2026-08-30 02:10:21,913 | INFO | Update id=863287189 is handled. Duration 217 ms by bot id=8928759774
+2026-08-30 02:10:25,113 | INFO | Update id=863287190 is handled. Duration 203 ms by bot id=8928759774
+2026-08-30 02:11:11,158 | INFO | Update id=863287191 is not handled. Duration 42005 ms by bot id=8928759774
+2026-08-30 02:11:11,158 | ERROR | Cause exception while process update id=863287191 by bot id=8928759774
+TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 2287, in callback_refresh_all
+    await safe_edit(callback.message, f"✅ <b>ОБНОВЛЕНИЕ ЗАВЕРШЕНО</b>\n\n✅ Обновлено: <b>{ok}</b>\n❌ Ошибок: <b>{errors}</b>",reply_markup=admin_keyboard(callback.from_user.id)); await callback.answer()
+                                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\bot.py", line 514, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-08-30 02:11:28,029 | INFO | Update id=863287192 is handled. Duration 190 ms by bot id=8928759774
+2026-08-30 02:11:29,875 | INFO | Update id=863287193 is handled. Duration 206 ms by bot id=8928759774
+2026-08-30 02:11:32,433 | INFO | Update id=863287194 is handled. Duration 156 ms by bot id=8928759774
+2026-08-30 02:11:51,148 | INFO | Update id=863287195 is handled. Duration 450 ms by bot id=8928759774
+2026-08-30 02:12:12,947 | INFO | Update id=863287196 is handled. Duration 203 ms by bot id=8928759774
+2026-08-30 02:12:28,438 | INFO | Update id=863287197 is handled. Duration 424 ms by bot id=8928759774
+2026-08-30 02:12:45,052 | INFO | Update id=863287198 is handled. Duration 219 ms by bot id=8928759774
+2026-08-30 02:12:46,759 | INFO | Update id=863287199 is handled. Duration 264 ms by bot id=8928759774
+2026-08-30 02:12:49,657 | INFO | Update id=863287200 is handled. Duration 364 ms by bot id=8928759774
+2026-08-30 02:12:51,083 | INFO | Update id=863287201 is handled. Duration 327 ms by bot id=8928759774
+2026-08-30 02:12:52,613 | INFO | Update id=863287202 is handled. Duration 226 ms by bot id=8928759774
+2026-08-30 02:12:54,286 | INFO | Update id=863287203 is handled. Duration 204 ms by bot id=8928759774
+2026-08-30 02:12:55,957 | INFO | Update id=863287204 is handled. Duration 218 ms by bot id=8928759774
+2026-08-30 02:12:58,507 | INFO | Update id=863287205 is handled. Duration 273 ms by bot id=8928759774
+2026-08-30 02:13:51,775 | INFO | Update id=863287206 is handled. Duration 261 ms by bot id=8928759774
+2026-08-30 02:13:52,830 | INFO | Update id=863287207 is handled. Duration 201 ms by bot id=8928759774
+2026-08-30 02:13:54,044 | INFO | Update id=863287208 is handled. Duration 261 ms by bot id=8928759774
+2026-08-30 02:13:59,509 | INFO | Update id=863287209 is handled. Duration 2784 ms by bot id=8928759774
+2026-08-30 02:14:34,744 | INFO | Update id=863287210 is handled. Duration 109 ms by bot id=8928759774
+2026-08-30 02:14:45,010 | INFO | Update id=863287211 is handled. Duration 120 ms by bot id=8928759774
+2026-08-30 02:14:47,054 | INFO | Update id=863287212 is handled. Duration 395 ms by bot id=8928759774
+2026-08-30 02:14:50,667 | INFO | Update id=863287213 is handled. Duration 256 ms by bot id=8928759774
+2026-08-30 02:14:56,707 | INFO | Update id=863287214 is handled. Duration 266 ms by bot id=8928759774
+2026-08-30 02:14:59,325 | INFO | Update id=863287215 is handled. Duration 325 ms by bot id=8928759774
+2026-08-30 02:15:00,417 | INFO | Update id=863287216 is not handled. Duration 12 ms by bot id=8928759774
+2026-08-30 02:15:09,246 | INFO | Update id=863287217 is handled. Duration 322 ms by bot id=8928759774
+2026-08-30 02:15:10,826 | INFO | Update id=863287218 is handled. Duration 201 ms by bot id=8928759774
+2026-08-30 02:15:12,196 | INFO | Update id=863287219 is handled. Duration 332 ms by bot id=8928759774
+2026-08-30 02:15:14,912 | INFO | Update id=863287220 is handled. Duration 224 ms by bot id=8928759774
+2026-08-30 02:15:18,313 | INFO | Update id=863287221 is handled. Duration 325 ms by bot id=8928759774
+2026-08-30 02:15:22,184 | INFO | Update id=863287222 is handled. Duration 205 ms by bot id=8928759774
+2026-08-30 02:15:25,177 | INFO | Update id=863287223 is handled. Duration 367 ms by bot id=8928759774
+2026-08-30 02:15:32,618 | INFO | Update id=863287224 is handled. Duration 213 ms by bot id=8928759774
+2026-08-30 02:15:34,002 | INFO | Update id=863287225 is handled. Duration 219 ms by bot id=8928759774
+2026-08-30 02:15:36,769 | INFO | Update id=863287226 is handled. Duration 266 ms by bot id=8928759774
+2026-08-30 02:16:13,412 | INFO | Update id=863287227 is handled. Duration 208 ms by bot id=8928759774
+2026-08-30 02:16:18,861 | INFO | Update id=863287228 is handled. Duration 365 ms by bot id=8928759774
+2026-08-30 02:16:21,629 | INFO | Update id=863287229 is handled. Duration 225 ms by bot id=8928759774
+2026-08-30 02:16:26,288 | INFO | Update id=863287230 is handled. Duration 297 ms by bot id=8928759774
+2026-08-30 02:16:28,053 | INFO | Update id=863287231 is handled. Duration 282 ms by bot id=8928759774
+2026-08-30 02:16:36,712 | INFO | Update id=863287232 is handled. Duration 191 ms by bot id=8928759774
+2026-08-30 02:16:39,205 | INFO | Update id=863287233 is handled. Duration 198 ms by bot id=8928759774
+2026-08-30 02:16:40,136 | INFO | Update id=863287234 is handled. Duration 240 ms by bot id=8928759774
+2026-08-30 02:16:41,290 | INFO | Update id=863287235 is handled. Duration 192 ms by bot id=8928759774
+2026-08-30 02:16:43,922 | INFO | Update id=863287236 is handled. Duration 209 ms by bot id=8928759774
+2026-08-30 02:16:45,081 | INFO | Update id=863287237 is handled. Duration 204 ms by bot id=8928759774
+2026-08-30 02:16:46,102 | INFO | Update id=863287238 is handled. Duration 209 ms by bot id=8928759774
+2026-08-30 02:16:46,892 | INFO | Update id=863287239 is handled. Duration 209 ms by bot id=8928759774
+2026-08-30 02:16:48,632 | INFO | Update id=863287240 is handled. Duration 202 ms by bot id=8928759774
+2026-08-30 02:16:50,217 | INFO | Update id=863287241 is handled. Duration 196 ms by bot id=8928759774
+2026-08-30 02:16:53,163 | INFO | Update id=863287242 is not handled. Duration 168 ms by bot id=8928759774
+2026-08-30 02:16:53,163 | ERROR | Cause exception while process update id=863287242 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '7|kv'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '7|kv'
+2026-08-30 02:16:53,803 | INFO | Update id=863287243 is not handled. Duration 162 ms by bot id=8928759774
+2026-08-30 02:16:53,803 | ERROR | Cause exception while process update id=863287243 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '7|tournaments'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '7|tournaments'
+2026-08-30 02:16:57,658 | INFO | Update id=863287244 is not handled. Duration 333 ms by bot id=8928759774
+2026-08-30 02:16:57,658 | ERROR | Cause exception while process update id=863287244 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '7|shop_approve'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '7|shop_approve'
+2026-08-30 02:16:59,383 | INFO | Update id=863287245 is not handled. Duration 212 ms by bot id=8928759774
+2026-08-30 02:16:59,383 | ERROR | Cause exception while process update id=863287245 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '7|shop'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '7|shop'
+2026-08-30 02:17:03,181 | INFO | Update id=863287246 is not handled. Duration 190 ms by bot id=8928759774
+2026-08-30 02:17:03,182 | ERROR | Cause exception while process update id=863287246 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '7|logs'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '7|logs'
+2026-08-30 02:17:04,140 | INFO | Update id=863287247 is not handled. Duration 146 ms by bot id=8928759774
+2026-08-30 02:17:04,140 | ERROR | Cause exception while process update id=863287247 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '7|activity'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '7|activity'
+2026-08-30 02:17:04,979 | INFO | Update id=863287248 is handled. Duration 241 ms by bot id=8928759774
+2026-08-30 02:17:06,981 | INFO | Update id=863287249 is handled. Duration 242 ms by bot id=8928759774
+2026-08-30 02:17:08,987 | INFO | Update id=863287250 is not handled. Duration 317 ms by bot id=8928759774
+2026-08-30 02:17:08,987 | ERROR | Cause exception while process update id=863287250 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '6|activity'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '6|activity'
+2026-08-30 02:17:09,965 | INFO | Update id=863287251 is not handled. Duration 297 ms by bot id=8928759774
+2026-08-30 02:17:09,965 | ERROR | Cause exception while process update id=863287251 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '6|logs'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '6|logs'
+2026-08-30 02:17:10,939 | INFO | Update id=863287252 is not handled. Duration 236 ms by bot id=8928759774
+2026-08-30 02:17:10,939 | ERROR | Cause exception while process update id=863287252 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '6|kv'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '6|kv'
+2026-08-30 02:17:13,520 | INFO | Update id=863287253 is not handled. Duration 433 ms by bot id=8928759774
+2026-08-30 02:17:13,521 | ERROR | Cause exception while process update id=863287253 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '6|tournaments'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '6|tournaments'
+2026-08-30 02:17:15,796 | INFO | Update id=863287254 is handled. Duration 241 ms by bot id=8928759774
+2026-08-30 02:17:17,626 | INFO | Update id=863287255 is handled. Duration 682 ms by bot id=8928759774
+2026-08-30 02:17:18,690 | INFO | Update id=863287256 is not handled. Duration 255 ms by bot id=8928759774
+2026-08-30 02:17:18,690 | ERROR | Cause exception while process update id=863287256 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '4|activity'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '4|activity'
+2026-08-30 02:17:20,012 | INFO | Update id=863287257 is not handled. Duration 226 ms by bot id=8928759774
+2026-08-30 02:17:20,012 | ERROR | Cause exception while process update id=863287257 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '4|kv'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '4|kv'
+2026-08-30 02:17:20,652 | INFO | Update id=863287258 is not handled. Duration 140 ms by bot id=8928759774
+2026-08-30 02:17:20,652 | ERROR | Cause exception while process update id=863287258 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '4|tournaments'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '4|tournaments'
+2026-08-30 02:17:21,764 | INFO | Update id=863287259 is handled. Duration 237 ms by bot id=8928759774
+2026-08-30 02:17:23,189 | INFO | Update id=863287260 is handled. Duration 206 ms by bot id=8928759774
+2026-08-30 02:17:29,959 | INFO | Update id=863287261 is not handled. Duration 243 ms by bot id=8928759774
+2026-08-30 02:17:29,959 | ERROR | Cause exception while process update id=863287261 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '4|moderation'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '4|moderation'
+2026-08-30 02:17:31,499 | INFO | Update id=863287262 is handled. Duration 209 ms by bot id=8928759774
+2026-08-30 02:17:35,552 | INFO | Update id=863287263 is handled. Duration 199 ms by bot id=8928759774
+2026-08-30 02:17:36,763 | INFO | Update id=863287264 is not handled. Duration 170 ms by bot id=8928759774
+2026-08-30 02:17:36,763 | ERROR | Cause exception while process update id=863287264 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '3|kv'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '3|kv'
+2026-08-30 02:17:37,371 | INFO | Update id=863287265 is not handled. Duration 231 ms by bot id=8928759774
+2026-08-30 02:17:37,371 | ERROR | Cause exception while process update id=863287265 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '3|tournaments'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '3|tournaments'
+2026-08-30 02:17:39,291 | INFO | Update id=863287266 is not handled. Duration 263 ms by bot id=8928759774
+2026-08-30 02:17:39,291 | ERROR | Cause exception while process update id=863287266 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '3|activity'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '3|activity'
+2026-08-30 02:17:41,662 | INFO | Update id=863287267 is not handled. Duration 167 ms by bot id=8928759774
+2026-08-30 02:17:41,662 | ERROR | Cause exception while process update id=863287267 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '3|moderation'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka V 2.8.0\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '3|moderation'
+2026-08-30 02:17:47,009 | INFO | Update id=863287268 is handled. Duration 226 ms by bot id=8928759774
+2026-08-30 02:17:51,024 | INFO | Update id=863287269 is handled. Duration 205 ms by bot id=8928759774
+2026-08-30 02:20:24,640 | INFO | Update id=863287270 is handled. Duration 196 ms by bot id=8928759774
+2026-08-30 02:20:30,336 | INFO | Update id=863287271 is handled. Duration 2786 ms by bot id=8928759774
+2026-08-30 02:20:39,154 | INFO | Update id=863287272 is handled. Duration 215 ms by bot id=8928759774
+2026-08-30 02:22:10,757 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 02:22:10,757 | INFO | Start polling
+2026-08-30 02:22:11,241 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 02:22:17,485 | INFO | Update id=863287273 is handled. Duration 307 ms by bot id=8928759774
+2026-08-30 02:22:42,563 | INFO | Update id=863287274 is handled. Duration 205 ms by bot id=8928759774
+2026-08-30 02:22:44,087 | INFO | Update id=863287275 is handled. Duration 260 ms by bot id=8928759774
+2026-08-30 02:23:10,973 | INFO | Update id=863287276 is handled. Duration 250 ms by bot id=8928759774
+2026-08-30 02:23:23,762 | INFO | Update id=863287277 is handled. Duration 238 ms by bot id=8928759774
+2026-08-30 02:23:24,833 | INFO | Update id=863287278 is handled. Duration 396 ms by bot id=8928759774
+2026-08-30 02:23:27,011 | INFO | Update id=863287279 is handled. Duration 293 ms by bot id=8928759774
+2026-08-30 02:23:37,948 | INFO | Update id=863287280 is handled. Duration 252 ms by bot id=8928759774
+2026-08-30 02:23:43,502 | INFO | Update id=863287281 is handled. Duration 252 ms by bot id=8928759774
+2026-08-30 02:23:50,468 | INFO | Update id=863287282 is handled. Duration 3674 ms by bot id=8928759774
+2026-08-30 02:23:57,951 | INFO | Update id=863287283 is handled. Duration 204 ms by bot id=8928759774
+2026-08-30 02:24:01,825 | INFO | Update id=863287284 is handled. Duration 228 ms by bot id=8928759774
+2026-08-30 02:24:03,533 | INFO | Update id=863287285 is handled. Duration 761 ms by bot id=8928759774
+2026-08-30 02:24:06,646 | INFO | Update id=863287286 is handled. Duration 278 ms by bot id=8928759774
+2026-08-30 02:24:19,008 | INFO | Update id=863287287 is handled. Duration 193 ms by bot id=8928759774
+2026-08-30 02:24:22,836 | INFO | Update id=863287288 is handled. Duration 230 ms by bot id=8928759774
+2026-08-30 02:24:24,366 | INFO | Update id=863287289 is handled. Duration 246 ms by bot id=8928759774
+2026-08-30 02:24:30,118 | INFO | Update id=863287290 is not handled. Duration 224 ms by bot id=8928759774
+2026-08-30 02:24:30,118 | ERROR | Cause exception while process update id=863287290 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '7|backups'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '7|backups'
+2026-08-30 02:24:33,980 | INFO | Update id=863287291 is handled. Duration 200 ms by bot id=8928759774
+2026-08-30 02:24:35,478 | INFO | Update id=863287292 is handled. Duration 198 ms by bot id=8928759774
+2026-08-30 02:24:40,129 | INFO | Update id=863287293 is handled. Duration 204 ms by bot id=8928759774
+2026-08-30 02:24:41,774 | INFO | Update id=863287294 is handled. Duration 209 ms by bot id=8928759774
+2026-08-30 02:24:44,462 | INFO | Update id=863287295 is not handled. Duration 199 ms by bot id=8928759774
+2026-08-30 02:24:44,463 | ERROR | Cause exception while process update id=863287295 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '5|kv'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '5|kv'
+2026-08-30 02:24:45,309 | INFO | Update id=863287296 is not handled. Duration 181 ms by bot id=8928759774
+2026-08-30 02:24:45,309 | ERROR | Cause exception while process update id=863287296 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '5|tournaments'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '5|tournaments'
+2026-08-30 02:24:46,417 | INFO | Update id=863287297 is not handled. Duration 174 ms by bot id=8928759774
+2026-08-30 02:24:46,417 | ERROR | Cause exception while process update id=863287297 by bot id=8928759774
+ValueError: invalid literal for int() with base 10: '5|activity'
+Traceback (most recent call last):
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5042, in v29_access_toggle
+    await v29_access_role(callback)
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 5020, in v29_access_role
+    role=int(callback.data.split("|",1)[1]); rows=[]
+ValueError: invalid literal for int() with base 10: '5|activity'
+2026-08-30 02:24:47,571 | INFO | Update id=863287298 is handled. Duration 320 ms by bot id=8928759774
+2026-08-30 02:24:49,352 | INFO | Update id=863287299 is handled. Duration 333 ms by bot id=8928759774
+2026-08-30 02:24:50,816 | INFO | Update id=863287300 is handled. Duration 199 ms by bot id=8928759774
+2026-08-30 02:24:51,806 | INFO | Update id=863287301 is handled. Duration 207 ms by bot id=8928759774
+2026-08-30 02:24:54,564 | INFO | Update id=863287302 is handled. Duration 205 ms by bot id=8928759774
+2026-08-30 02:24:57,323 | INFO | Update id=863287303 is handled. Duration 249 ms by bot id=8928759774
+2026-08-30 02:25:00,924 | INFO | Update id=863287304 is handled. Duration 214 ms by bot id=8928759774
+2026-08-30 02:26:03,063 | INFO | Update id=863287305 is handled. Duration 241 ms by bot id=8928759774
+2026-08-30 02:26:04,341 | INFO | Update id=863287306 is handled. Duration 232 ms by bot id=8928759774
+2026-08-30 02:26:06,197 | INFO | Update id=863287307 is handled. Duration 348 ms by bot id=8928759774
+2026-08-30 02:26:07,252 | INFO | Update id=863287308 is handled. Duration 203 ms by bot id=8928759774
+2026-08-30 02:26:26,561 | INFO | Update id=863287309 is handled. Duration 198 ms by bot id=8928759774
+2026-08-30 02:26:28,035 | INFO | Update id=863287310 is handled. Duration 249 ms by bot id=8928759774
+2026-08-30 02:26:30,561 | INFO | Update id=863287311 is handled. Duration 1432 ms by bot id=8928759774
+2026-08-30 02:35:09,526 | INFO | Update id=863287312 is handled. Duration 3 ms by bot id=8928759774
+2026-08-30 02:35:16,992 | INFO | Update id=863287313 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 02:35:35,000 | INFO | Update id=863287314 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:35:53,638 | INFO | Update id=863287315 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:36:01,231 | INFO | Update id=863287316 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:36:09,612 | INFO | Update id=863287317 is handled. Duration 235 ms by bot id=8928759774
+2026-08-30 02:36:19,096 | INFO | Update id=863287318 is handled. Duration 252 ms by bot id=8928759774
+2026-08-30 02:36:39,656 | INFO | Update id=863287319 is handled. Duration 249 ms by bot id=8928759774
+2026-08-30 02:36:51,984 | INFO | Update id=863287320 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:36:57,337 | INFO | Update id=863287321 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:37:30,776 | INFO | Update id=863287322 is handled. Duration 255 ms by bot id=8928759774
+2026-08-30 02:40:56,944 | INFO | Update id=863287323 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:41:07,364 | INFO | Update id=863287324 is handled. Duration 265 ms by bot id=8928759774
+2026-08-30 02:41:12,929 | INFO | Update id=863287325 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:41:27,330 | INFO | Update id=863287326 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 02:41:38,151 | INFO | Update id=863287328 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 02:41:38,288 | INFO | Update id=863287329 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 02:41:38,466 | INFO | Update id=863287327 is handled. Duration 436 ms by bot id=8928759774
+2026-08-30 02:41:58,045 | INFO | Update id=863287330 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:42:47,646 | INFO | Update id=863287332 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 02:42:47,759 | INFO | Update id=863287331 is handled. Duration 486 ms by bot id=8928759774
+2026-08-30 02:43:02,956 | INFO | Update id=863287333 is handled. Duration 157 ms by bot id=8928759774
+2026-08-30 02:43:10,145 | INFO | Update id=863287334 is handled. Duration 285 ms by bot id=8928759774
+2026-08-30 02:43:13,746 | INFO | Update id=863287335 is handled. Duration 144 ms by bot id=8928759774
+2026-08-30 02:43:17,624 | INFO | Update id=863287336 is handled. Duration 172 ms by bot id=8928759774
+2026-08-30 02:43:21,501 | INFO | Update id=863287337 is handled. Duration 137 ms by bot id=8928759774
+2026-08-30 02:43:37,723 | INFO | Update id=863287338 is handled. Duration 98 ms by bot id=8928759774
+2026-08-30 02:43:40,589 | INFO | Update id=863287339 is handled. Duration 99 ms by bot id=8928759774
+2026-08-30 02:43:42,358 | INFO | Update id=863287340 is handled. Duration 200 ms by bot id=8928759774
+2026-08-30 02:45:07,522 | INFO | Update id=863287341 is handled. Duration 3206 ms by bot id=8928759774
+2026-08-30 02:45:11,555 | INFO | Update id=863287342 is handled. Duration 190 ms by bot id=8928759774
+2026-08-30 02:53:29,700 | INFO | Update id=863287344 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 02:53:29,804 | INFO | Update id=863287343 is handled. Duration 222 ms by bot id=8928759774
+2026-08-30 02:53:30,167 | INFO | Update id=863287345 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 02:56:18,360 | INFO | Update id=863287346 is handled. Duration 2 ms by bot id=8928759774
+2026-08-30 02:56:32,428 | INFO | Update id=863287347 is handled. Duration 244 ms by bot id=8928759774
+2026-08-30 02:57:22,322 | INFO | Update id=863287348 is handled. Duration 330 ms by bot id=8928759774
+2026-08-30 02:57:37,514 | INFO | Update id=863287350 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 02:57:37,725 | INFO | Update id=863287349 is handled. Duration 504 ms by bot id=8928759774
+2026-08-30 03:16:52,267 | INFO | Update id=863287351 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 03:17:14,784 | INFO | Update id=863287352 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 03:17:18,217 | INFO | Update id=863287353 is handled. Duration 188 ms by bot id=8928759774
+2026-08-30 03:22:11,186 | INFO | Automatic trash cleanup chat=-1004361184660 deleted=0 skipped=0 failed=0
+2026-08-30 03:25:01,021 | INFO | Update id=863287354 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 03:25:03,694 | INFO | Update id=863287355 is handled. Duration 490 ms by bot id=8928759774
+2026-08-30 03:25:09,974 | INFO | Update id=863287356 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 03:25:47,208 | INFO | Update id=863287357 is handled. Duration 1279 ms by bot id=8928759774
+2026-08-30 03:27:53,805 | INFO | Update id=863287358 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 03:47:54,367 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 03:47:54,368 | INFO | Start polling
+2026-08-30 03:47:54,606 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:47:54,615 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:47:54,954 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 03:49:12,915 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 03:49:12,916 | INFO | Start polling
+2026-08-30 03:49:13,405 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:49:13,405 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:49:13,750 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 03:49:48,020 | INFO | Update id=863287359 is handled. Duration 173 ms by bot id=8928759774
+2026-08-30 03:49:49,371 | INFO | Update id=863287360 is handled. Duration 206 ms by bot id=8928759774
+2026-08-30 03:49:50,709 | INFO | Update id=863287361 is handled. Duration 210 ms by bot id=8928759774
+2026-08-30 03:49:51,807 | INFO | Update id=863287362 is not handled. Duration 10 ms by bot id=8928759774
+2026-08-30 03:50:26,135 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:50:26,136 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:50:28,196 | INFO | Update id=863287363 is handled. Duration 2364 ms by bot id=8928759774
+2026-08-30 03:50:42,197 | INFO | Update id=863287364 is not handled. Duration 11 ms by bot id=8928759774
+2026-08-30 03:51:00,298 | INFO | Update id=863287365 is handled. Duration 201 ms by bot id=8928759774
+2026-08-30 03:51:44,624 | INFO | Update id=863287366 is handled. Duration 199 ms by bot id=8928759774
+2026-08-30 03:51:46,360 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:51:46,360 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:51:50,071 | INFO | Update id=863287367 is handled. Duration 4005 ms by bot id=8928759774
+2026-08-30 03:54:24,728 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 03:54:24,728 | INFO | Start polling
+2026-08-30 03:54:24,938 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:54:24,938 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:54:25,272 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 03:55:01,429 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 03:55:20,502 | INFO | Start polling
+2026-08-30 03:55:20,645 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:55:20,645 | WARNING | Google Drive недоступен: No module named 'google.oauth2'
+2026-08-30 03:55:20,962 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 03:55:24,322 | INFO | Polling stopped
+2026-08-30 03:55:24,323 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-08-30 03:55:24,323 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8928759774)
+2026-08-30 03:55:24,672 | INFO | Polling stopped for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 03:57:12,815 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 03:57:12,815 | INFO | Start polling
+2026-08-30 03:57:14,821 | ERROR | Google Drive upload failed
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 445, in create_backup
+    try: gdrive.upload(target)
+         ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 31, in upload
+    svc.files().create(body=meta,media_body=MediaFileUpload(str(path),mimetype='application/x-sqlite3'),fields='id,name').execute()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 404 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id%2Cname&alt=json&uploadType=multipart returned "File not found: bc1qt03z0756r5vmq5xh76dzx9svnkan964l3q6txy.". Details: "[{'message': 'File not found: bc1qt03z0756r5vmq5xh76dzx9svnkan964l3q6txy.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-08-30 03:57:15,143 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 03:58:52,768 | INFO | Polling stopped
+2026-08-30 03:58:52,769 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-08-30 03:58:52,769 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8928759774)
+2026-08-30 03:58:53,328 | INFO | Polling stopped for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:00:30,010 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:00:30,010 | INFO | Start polling
+2026-08-30 04:00:33,396 | WARNING | Encountered 403 Forbidden with reason "storageQuotaExceeded"
+2026-08-30 04:00:33,397 | ERROR | Google Drive upload failed
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 445, in create_backup
+    try: gdrive.upload(target)
+         ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 31, in upload
+    svc.files().create(body=meta,media_body=MediaFileUpload(str(path),mimetype='application/x-sqlite3'),fields='id,name').execute()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id%2Cname&alt=json&uploadType=multipart returned "Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.". Details: "[{'message': 'Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.', 'domain': 'usageLimits', 'reason': 'storageQuotaExceeded'}]">
+2026-08-30 04:00:33,404 | INFO | Starting daily Free Fire profile sync for 0 players
+2026-08-30 04:00:33,707 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:00:54,898 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:00:54,899 | INFO | Start polling
+2026-08-30 04:01:00,370 | WARNING | Encountered 403 Forbidden with reason "storageQuotaExceeded"
+2026-08-30 04:01:00,371 | ERROR | Google Drive upload failed
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\bot.py", line 445, in create_backup
+    try: gdrive.upload(target)
+         ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 31, in upload
+    svc.files().create(body=meta,media_body=MediaFileUpload(str(path),mimetype='application/x-sqlite3'),fields='id,name').execute()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id%2Cname&alt=json&uploadType=multipart returned "Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.". Details: "[{'message': 'Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.', 'domain': 'usageLimits', 'reason': 'storageQuotaExceeded'}]">
+2026-08-30 04:01:00,378 | INFO | Starting daily Free Fire profile sync for 0 players
+2026-08-30 04:01:00,691 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:12:41,949 | INFO | Update id=863287368 is handled. Duration 110 ms by bot id=8928759774
+2026-08-30 04:18:31,283 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:18:31,283 | INFO | Start polling
+2026-08-30 04:18:33,161 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:18:33,162 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:18:33,167 | INFO | Starting daily Free Fire profile sync for 19 players
+2026-08-30 04:18:33,498 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:18:48,997 | INFO | Update id=863287369 is handled. Duration 220 ms by bot id=8928759774
+2026-08-30 04:18:51,792 | INFO | Update id=863287370 is handled. Duration 288 ms by bot id=8928759774
+2026-08-30 04:18:54,465 | INFO | Update id=863287371 is handled. Duration 301 ms by bot id=8928759774
+2026-08-30 04:18:55,940 | INFO | Update id=863287373 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 04:18:56,026 | INFO | Update id=863287374 is not handled. Duration 4 ms by bot id=8928759774
+2026-08-30 04:18:56,038 | INFO | Update id=863287372 is handled. Duration 598 ms by bot id=8928759774
+2026-08-30 04:18:56,331 | INFO | Removed UID 9695665457 after leaving guild 3101503290
+2026-08-30 04:18:56,333 | INFO | Update id=863287375 is handled. Duration 0 ms by bot id=8928759774
+2026-08-30 04:19:00,194 | INFO | Update id=863287376 is handled. Duration 222 ms by bot id=8928759774
+2026-08-30 04:19:01,762 | INFO | Update id=863287377 is handled. Duration 265 ms by bot id=8928759774
+2026-08-30 04:19:16,990 | INFO | Update id=863287378 is handled. Duration 11293 ms by bot id=8928759774
+2026-08-30 04:19:20,665 | INFO | Update id=863287379 is handled. Duration 285 ms by bot id=8928759774
+2026-08-30 04:20:12,251 | INFO | Update id=863287380 is handled. Duration 198 ms by bot id=8928759774
+2026-08-30 04:20:15,285 | INFO | Update id=863287381 is handled. Duration 303 ms by bot id=8928759774
+2026-08-30 04:20:16,317 | INFO | Update id=863287382 is handled. Duration 216 ms by bot id=8928759774
+2026-08-30 04:20:18,538 | INFO | Update id=863287383 is handled. Duration 242 ms by bot id=8928759774
+2026-08-30 04:20:21,478 | INFO | Update id=863287384 is handled. Duration 230 ms by bot id=8928759774
+2026-08-30 04:20:35,007 | INFO | Update id=863287385 is handled. Duration 249 ms by bot id=8928759774
+2026-08-30 04:20:36,592 | INFO | Update id=863287386 is handled. Duration 266 ms by bot id=8928759774
+2026-08-30 04:20:38,080 | INFO | Update id=863287387 is handled. Duration 306 ms by bot id=8928759774
+2026-08-30 04:20:40,070 | INFO | Update id=863287388 is handled. Duration 239 ms by bot id=8928759774
+2026-08-30 04:20:44,100 | INFO | Update id=863287389 is handled. Duration 263 ms by bot id=8928759774
+2026-08-30 04:20:58,627 | INFO | Update id=863287390 is handled. Duration 267 ms by bot id=8928759774
+2026-08-30 04:21:04,169 | INFO | Polling stopped
+2026-08-30 04:21:04,170 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-08-30 04:21:04,170 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8928759774)
+2026-08-30 04:21:04,555 | INFO | Polling stopped for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:21:26,203 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:21:26,203 | INFO | Start polling
+2026-08-30 04:21:26,660 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:21:26,661 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:21:26,665 | INFO | Starting daily Free Fire profile sync for 18 players
+2026-08-30 04:21:26,996 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:23:22,365 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:23:22,365 | INFO | Start polling
+2026-08-30 04:23:22,891 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:23:22,892 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:23:22,897 | INFO | Starting daily Free Fire profile sync for 18 players
+2026-08-30 04:23:23,208 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:23:48,522 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:23:48,522 | INFO | Start polling
+2026-08-30 04:23:48,954 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:23:48,956 | ERROR | Google Drive OAuth недоступен: Client secrets must be for a web or installed app.
+Traceback (most recent call last):
+  File "C:\Users\vavix\Desktop\Vaka AI V 3\google_drive_backup.py", line 79, in _ensure
+    flow = InstalledAppFlow.from_client_secrets_file(
+        str(credentials_path), SCOPES
+    )
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 203, in from_client_secrets_file
+    return cls.from_client_config(client_config, scopes=scopes, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vavix\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_oauthlib\flow.py", line 161, in from_client_config
+    raise ValueError("Client secrets must be for a web or installed app.")
+ValueError: Client secrets must be for a web or installed app.
+2026-08-30 04:23:48,960 | INFO | Starting daily Free Fire profile sync for 18 players
+2026-08-30 04:23:49,298 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:28:02,081 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:28:02,081 | INFO | Start polling
+2026-08-30 04:28:02,579 | ERROR | Google Drive OAuth: нужен credentials.json типа Desktop app / installed.
+2026-08-30 04:28:02,580 | ERROR | Google Drive OAuth: нужен credentials.json типа Desktop app / installed.
+2026-08-30 04:28:02,583 | INFO | Starting daily Free Fire profile sync for 18 players
+2026-08-30 04:28:02,925 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:28:24,840 | INFO | Polling stopped
+2026-08-30 04:28:24,841 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-08-30 04:28:24,841 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8928759774)
+2026-08-30 04:28:25,194 | INFO | Polling stopped for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:28:52,660 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:28:52,661 | INFO | Start polling
+2026-08-30 04:28:53,088 | ERROR | Google Drive OAuth: нужен credentials.json типа Desktop app / installed.
+2026-08-30 04:28:53,088 | ERROR | Google Drive OAuth: нужен credentials.json типа Desktop app / installed.
+2026-08-30 04:28:53,092 | INFO | Starting daily Free Fire profile sync for 18 players
+2026-08-30 04:28:53,393 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:34:06,731 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:34:06,731 | INFO | Start polling
+2026-08-30 04:34:07,153 | INFO | Google Drive OAuth: используем credentials.json: C:\Users\vavix\Desktop\Vaka AI V 3\credentials.json (тип=installed)
+2026-08-30 04:34:07,154 | INFO | 🔐 Google Drive: требуется OAuth авторизация. Откроется браузер.
+2026-08-30 04:34:07,338 | INFO | Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=483824934077-i7h67s3ggokmmn3t1a05iljdoi0kdoh5.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A62940%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&state=HHe0bG8rn23LP4exvoW3ZwfB31bF2J&code_challenge=TB08Xs38kJeHwH2HkFt2dqU_8rw09XAQ69kjHMHdy3o&code_challenge_method=S256&access_type=offline&prompt=consent
+2026-08-30 04:35:08,053 | INFO | "GET /?state=HHe0bG8rn23LP4exvoW3ZwfB31bF2J&iss=https://accounts.google.com&code=4/0ATsMZqAw9VbO_WxbFC4haJBRvYavUfNMYV1KCduR9lberbAR23Er5DwAdvLS3OnWM2JIBg&scope=https://www.googleapis.com/auth/drive HTTP/1.1" 200 65
+2026-08-30 04:35:08,547 | INFO | ✅ Google Drive OAuth подключён (аккаунт пользователя); token=C:\Users\vavix\Desktop\Vaka AI V 3\token.json
+2026-08-30 04:35:11,073 | INFO | ✅ Google Drive backup uploaded: guild_activity_20260830_043406.db
+2026-08-30 04:35:11,440 | INFO | Starting daily Free Fire profile sync for 18 players
+2026-08-30 04:35:11,752 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:35:45,664 | INFO | Update id=863287391 is handled. Duration 158 ms by bot id=8928759774
+2026-08-30 04:35:46,776 | INFO | Update id=863287392 is handled. Duration 198 ms by bot id=8928759774
+2026-08-30 04:35:48,016 | INFO | Update id=863287393 is handled. Duration 203 ms by bot id=8928759774
+2026-08-30 04:35:48,710 | INFO | Update id=863287394 is not handled. Duration 11 ms by bot id=8928759774
+2026-08-30 04:36:07,781 | INFO | Update id=863287395 is not handled. Duration 11 ms by bot id=8928759774
+2026-08-30 04:36:11,082 | INFO | Update id=863287396 is handled. Duration 280 ms by bot id=8928759774
+2026-08-30 04:36:13,011 | INFO | Update id=863287397 is handled. Duration 267 ms by bot id=8928759774
+2026-08-30 04:45:48,685 | INFO | ✅ Vaka V7.1 запущен (SiamBhau API)
+2026-08-30 04:45:48,685 | INFO | Start polling
+2026-08-30 04:45:49,137 | INFO | Google Drive OAuth: используем credentials.json: C:\Users\vavix\Desktop\Vaka_AI_V3_FIXED\credentials.json (тип=installed)
+2026-08-30 04:45:49,137 | INFO | 🔐 Google Drive: требуется OAuth авторизация. Откроется браузер.
+2026-08-30 04:45:49,279 | INFO | Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=483824934077-5vb26j7s22nt3trfdqveo7ul91jbbir4.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A63936%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&state=bpfdhfJQS9yJIAfErSAgYEVZBLWzo5&code_challenge=1-F7UEdu38QURItp1IFcgc2zsk9HoUpzulF2MmntDQ0&code_challenge_method=S256&access_type=offline&prompt=consent
+2026-08-30 04:45:56,174 | INFO | "GET /?state=bpfdhfJQS9yJIAfErSAgYEVZBLWzo5&iss=https://accounts.google.com&code=4/0ATsMZqDf1Hp2yueljPEDyoLdEOxc1W7YSJ3Z5M-l4ixpsmyiWz9CZso9oFtvmWUbDXbfGw&scope=https://www.googleapis.com/auth/drive HTTP/1.1" 200 65
+2026-08-30 04:45:56,618 | INFO | ✅ Google Drive OAuth подключён (аккаунт пользователя); token=C:\Users\vavix\Desktop\Vaka_AI_V3_FIXED\token.json
+2026-08-30 04:45:59,389 | INFO | ✅ Google Drive backup uploaded: guild_activity_20260830_044548.db
+2026-08-30 04:45:59,673 | INFO | Starting daily Free Fire profile sync for 18 players
+2026-08-30 04:45:59,970 | INFO | Run polling for bot @Nadzo69rBot id=8928759774 - '👑 Vaka | БОТ ❤️\u200d🩹'
+2026-08-30 04:46:00,058 | INFO | Update id=863287401 is handled. Duration 5 ms by bot id=8928759774
+2026-08-30 04:46:00,059 | INFO | Update id=863287399 is handled. Duration 7 ms by bot id=8928759774
+2026-08-30 04:46:00,060 | INFO | Update id=863287398 is handled. Duration 8 ms by bot id=8928759774
+2026-08-30 04:46:00,061 | INFO | Update id=863287400 is handled. Duration 8 ms by bot id=8928759774
+2026-08-30 04:46:05,343 | INFO | Update id=863287402 is handled. Duration 784 ms by bot id=8928759774
+2026-08-30 04:46:08,900 | INFO | Update id=863287403 is handled. Duration 765 ms by bot id=8928759774
+2026-08-30 04:46:12,087 | INFO | Update id=863287404 is handled. Duration 661 ms by bot id=8928759774
+2026-08-30 04:46:13,659 | INFO | Update id=863287405 is handled. Duration 218 ms by bot id=8928759774
+2026-08-30 04:46:15,610 | INFO | Update id=863287406 is handled. Duration 352 ms by bot id=8928759774
+2026-08-30 04:46:18,804 | INFO | Update id=863287407 is handled. Duration 263 ms by bot id=8928759774
+2026-08-30 04:46:20,779 | INFO | Update id=863287408 is handled. Duration 273 ms by bot id=8928759774
+2026-08-30 04:46:22,415 | INFO | Update id=863287409 is handled. Duration 249 ms by bot id=8928759774
+2026-08-30 04:46:24,111 | INFO | Update id=863287410 is handled. Duration 305 ms by bot id=8928759774
