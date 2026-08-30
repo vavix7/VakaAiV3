@@ -579,7 +579,7 @@ def week_label(start: str, end: str):
 
 
 def get_default_week():
-    """Текущая игровая неделя. Переключение происходит только в понедельник 04:10 МСК."""
+    """Текущая игровая неделя. Переключение происходит только в понедельник 04:00 МСК."""
     try:
         now = datetime.now(ZoneInfo(TIMEZONE))
     except Exception:
@@ -921,7 +921,7 @@ def enhanced_player_card(player_id: str):
     if next_threshold: lines.append(f"🚀 До {html.escape(next_name)}: <b>{format_number(next_left)}</b>")
     lines.append(f"👑 Достижений: <b>{len(db.get_player_achievements(player_id))}</b>")
     if p["telegram_id"]:
-        wc=db.get_warning_count(GUILD_CHAT_ID,int(p["telegram_id"])); ban=db.get_ban(GUILD_CHAT_ID,int(p["telegram_id"])); lines.append(f"⚠️ Предупреждения: <b>{wc}</b>"); lines.append(f"🔨 Бан: {'активен' if ban and ban["active"] else 'нет'}")
+        wc=db.get_warning_count(GUILD_CHAT_ID,int(p["telegram_id"])); ban=db.get_ban(GUILD_CHAT_ID,int(p["telegram_id"])); lines.append(f"⚠️ Предупреждения: <b>{wc}</b>"); lines.append(f"🔨 Бан: {'активен' if ban and ban.get('active') else 'нет'}")
     return "\n".join(lines)
 
 # =========================================================
@@ -965,7 +965,12 @@ def build_stats_text(mode="current"):
         avg = round(total / len(rows), 1) if rows else 0
         rank_counts = {}
         for r in rows:
-            rank = get_rank(int(db.get_player(r["player_id"])["total_activity"] or 0))
+            # week_players can survive a legacy/manual DB migration without a
+            # corresponding players row. Never let a statistics button crash
+            # the whole callback on such an orphan record.
+            player = db.get_player(r["player_id"])
+            total_activity = int(player["total_activity"] or 0) if player else int(r["activity"] or 0)
+            rank = get_rank(total_activity)
             rank_counts[rank] = rank_counts.get(rank, 0) + 1
         lines = [
             "📊 <b>СТАТИСТИКА — ТЕКУЩАЯ НЕДЕЛЯ</b>", "",
@@ -2116,7 +2121,9 @@ async def build_week_report(week_start: str):
         if player["telegram_id"]:
             tg_label = f"@{html.escape(player['telegram_username'])}" if player['telegram_username'] else "Telegram"
             tg_part = f" — {mention_user(player['telegram_id'], tg_label)}"
-        lines.append(f"{get_medal(i)} <b>{html.escape(player['nick'])}</b>{tg_part} — 🔥 {format_number(int(player['activity']))} — 🎖 {get_rank(int(db.get_player(player['player_id'])['total_activity'] or 0))}")
+        player_record = db.get_player(player["player_id"])
+        total_activity = int(player_record["total_activity"] or 0) if player_record else int(player["activity"] or 0)
+        lines.append(f"{get_medal(i)} <b>{html.escape(player['nick'])}</b>{tg_part} — 🔥 {format_number(int(player['activity']))} — 🎖 {get_rank(total_activity)}")
     monthly = [r for r in rewards if r["reward_type"] == "monthly" and r["status"] != "cancelled"]
     weekly = [r for r in rewards if r["reward_type"] == "weekly" and r["status"] != "cancelled"]
     lines.extend(["", "🎁 <b>НАГРАДЫ ЗА АКТИВНОСТЬ</b>", "", "💎 <b>Месячный ваучер — 2600 алмазов</b>"])
@@ -4643,7 +4650,6 @@ async def monitoring_message_handler(message: Message):
     await handle_monitoring_payload(message, message.text or "")
 
 
-
 # --- IRIS RP DISPATCHER (ordered before generic text fallback) ---
 # The RP vocabulary is defined above; keeping the pattern here prevents
 # NameError during decorator registration and ensures RP is not swallowed
@@ -4745,6 +4751,129 @@ async def _dispatch_unified_text_command(message: Message, state: FSMContext | N
             await fn(message.model_copy(update={"text":"/"+cmd+(" "+original if original else "")}))
             return True
     return False
+
+@dp.message(F.text.regexp(r"^VAKA(?:\\?_)?ACTIVITY(?:\\?_)?LIST(?:\s|$)", flags=re.I | re.M))
+async def vaka_activity_list_handler(message: Message):
+    """Import the AI-generated activity list from any chat.
+
+    Protocol:
+      VAKA_ACTIVITY_LIST
+      UID WEEK_ACTIVITY TOTAL_ACTIVITY TOURNAMENT_WEEK TOURNAMENT_TOTAL
+
+    The header may arrive escaped as ``VAKA\\_ACTIVITY\\_LIST`` from Markdown.
+    Only already-registered players are accepted; the main DB is never populated
+    by an activity import. The current week remains editable until Monday 04:00
+    Moscow time, and repeated lists replace the current weekly snapshot.
+    """
+    if not activity_admin(message.from_user.id):
+        await message.answer("🔒 Недостаточно прав для загрузки активности.")
+        return
+
+    raw = (message.text or "").replace("\\\\_", "_").strip()
+    lines = [line.strip() for line in raw.splitlines() if line.strip()]
+    if not lines or lines[0].upper() != "VAKA_ACTIVITY_LIST":
+        return
+
+    rows = []
+    errors = []
+    seen = set()
+    row_re = re.compile(r"^(\\d{8,15})\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)$")
+    for n, line in enumerate(lines[1:], start=2):
+        m = row_re.match(line)
+        if not m:
+            errors.append(f"Строка {n}: ожидается UID + 4 числовых значения.")
+            continue
+        uid, week_act, total_act, tour_week, tour_total = m.groups()
+        if uid in seen:
+            errors.append(f"Строка {n}: UID {uid} повторяется.")
+            continue
+        seen.add(uid)
+        rows.append((uid, int(week_act), int(total_act), int(tour_week), int(tour_total)))
+
+    if not rows:
+        await message.answer("❌ <b>VAKA_ACTIVITY_LIST</b> не содержит корректных игроков.")
+        return
+
+    current_start, current_end = get_default_week()
+    entries = []
+    unknown = []
+    for uid, week_act, total_act, tour_week, tour_total in rows:
+        player = db.get_player(uid)
+        if not player:
+            unknown.append(uid)
+            continue
+        entries.append(MonitoringEntry(
+            str(player["player_id"]),
+            str(player["nick"] or uid),
+            week_act,
+            total_act,
+        ))
+
+    if not entries:
+        await message.answer(
+            "❌ Ни один UID из списка не найден в базе данных.\n\n"
+            "Новые игроки через импорт активности не создаются."
+        )
+        return
+
+    try:
+        result = db.save_monitoring_snapshot(
+            current_start.isoformat(),
+            current_end.isoformat(),
+            entries,
+        )
+        db.log("vaka_activity_list", message.from_user.id, {
+            "chat_id": message.chat.id,
+            "week_start": current_start.isoformat(),
+            "players_received": len(rows),
+            "players_saved": len(entries),
+            "unknown_players": len(unknown),
+        })
+
+        for pid, previous, current, reason in result["anomalies"]:
+            db.add_anticheat_event(current_start.isoformat(), pid, previous, current, reason)
+            p = db.get_player(pid)
+            if OWNER_ID and p:
+                try:
+                    await bot.send_message(
+                        OWNER_ID,
+                        f"🧠 <b>АНТИНАКРУТКА</b>\\n\\n"
+                        f"👤 {html.escape(p['nick'])}\\n"
+                        f"📅 {format_date(current_start.isoformat())}\\n"
+                        f"📉 Было: {format_number(previous)}\\n"
+                        f"📈 Стало: {format_number(current)}\\n"
+                        f"⚠️ {html.escape(reason)}"
+                    )
+                except Exception:
+                    logger.exception("Не удалось отправить anti-cheat уведомление")
+
+        total = sum(e.activity for e in entries)
+        reply = (
+            "✅ <b>VAKA_ACTIVITY_LIST ПРИНЯТ</b>\\n\\n"
+            f"📅 Неделя: <code>{current_start.isoformat()}</code> — <code>{current_end.isoformat()}</code>\\n"
+            f"👥 Получено строк: <b>{len(rows)}</b>\\n"
+            f"💾 Сохранено игроков: <b>{len(entries)}</b>\\n"
+            f"🔥 Активность за неделю: <b>{format_number(total)}</b>\\n"
+            f"🚫 Не в БД: <b>{len(unknown)}</b>\\n\\n"
+            "ℹ️ В БД используются UID и настоящий ник зарегистрированного игрока. "
+            "Игроки, которых нет в базе, не добавляются. Повторная загрузка недели обновляет текущий снимок."
+        )
+        if unknown:
+            reply += "\\n\\n🚫 <b>Не найдены в БД:</b>\\n" + "\\n".join(
+                f"• <code>{html.escape(uid)}</code>" for uid in unknown[:20]
+            )
+        if errors:
+            reply += "\\n\\n⚠️ <b>Пропущены строки:</b>\\n" + "\\n".join(
+                f"• {html.escape(e)}" for e in errors[:10]
+            )
+        if result["anomalies"]:
+            reply += f"\\n\\n🧠 Аномалий: <b>{len(result['anomalies'])}</b> — владелец уведомлён."
+        await message.answer(reply)
+    except Exception as exc:
+        logger.exception("Ошибка VAKA_ACTIVITY_LIST")
+        await message.answer(f"❌ Список не сохранён: {html.escape(str(exc))}")
+
+
 
 @dp.message(StateFilter(None), F.text.regexp(RP_INVOCATION_PATTERN, flags=re.I))
 async def iris_rp_authoritative_handler(message: Message, state: FSMContext):

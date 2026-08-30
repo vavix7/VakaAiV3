@@ -50,8 +50,8 @@ for marker in ["duel_router","dice_router","clan_router","circle_router","iris_e
 
 if "https://siambhau69.eu.cc" not in (ROOT/"config.py").read_text(encoding="utf-8"):
     errors.append("SiamBhau HTTPS base URL missing")
-if 'FF_REGION = os.getenv("FF_REGION", "BD")' not in (ROOT/"config.py").read_text(encoding="utf-8"):
-    errors.append("BD default region missing")
+if 'FF_REGION = os.getenv("FF_REGION", "RU")' not in (ROOT/"config.py").read_text(encoding="utf-8"):
+    errors.append("RU default region missing")
 
 if errors:
     print("RELEASE_VERIFY_FAIL")
@@ -62,4 +62,4 @@ print(f"callbacks={len(callbacks)} callback_handlers={len(handlers)}")
 print("sqlite=OK")
 print("python=OK")
 print("siambhau=https://siambhau69.eu.cc")
-print("default_region=BD; india_fallback=IND")
+print("default_region=RU; display_region=Россия; india_fallback=IND when configured")

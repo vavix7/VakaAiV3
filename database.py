@@ -829,16 +829,20 @@ class Database:
                     if prev >= 1000 and (activity >= max(5000, prev * 4) or activity - prev >= 10000 or activity < prev):
                         reason = f"Аномальный скачок: {prev} → {activity}" if activity >= prev else f"Активность уменьшилась: {prev} → {activity}"
                         anomalies.append((pid, prev, activity, reason))
-                p = c.execute("SELECT player_id FROM players WHERE player_id=?", (pid,)).fetchone()
+                # Monitoring imports must NEVER register new players.
+                # Only players already present in the main database are eligible.
+                p = c.execute("SELECT * FROM players WHERE player_id=?", (pid,)).fetchone()
                 if not p:
-                    c.execute("INSERT INTO players(player_id,nick,created_at,updated_at) VALUES(?,?,?,?)", (pid, e.nick, now, now))
-                else:
-                    c.execute("UPDATE players SET nick=?,updated_at=? WHERE player_id=?", (e.nick, now, pid))
+                    continue
+                # Keep the nickname canonical: monitoring/AI input is allowed
+                # to contain an old or misspelled nickname, but the DB is the
+                # source of truth.
+                canonical_nick = str(p["nick"] or e.nick or pid)
                 old = c.execute("SELECT 1 FROM week_players WHERE week_start=? AND player_id=?", (week_start, pid)).fetchone()
                 if old:
-                    c.execute("UPDATE week_players SET nick=?,activity=?,updated_at=? WHERE week_start=? AND player_id=?", (e.nick, activity, now, week_start, pid))
+                    c.execute("UPDATE week_players SET nick=?,activity=?,updated_at=? WHERE week_start=? AND player_id=?", (canonical_nick, activity, now, week_start, pid))
                 else:
-                    c.execute("INSERT INTO week_players(week_start,player_id,nick,activity,created_at,updated_at) VALUES(?,?,?,?,?,?)", (week_start,pid,e.nick,activity,now,now))
+                    c.execute("INSERT INTO week_players(week_start,player_id,nick,activity,created_at,updated_at) VALUES(?,?,?,?,?,?)", (week_start,pid,canonical_nick,activity,now,now))
                     c.execute("UPDATE players SET weeks_count=weeks_count+1 WHERE player_id=?", (pid,))
                 c.execute("INSERT INTO monitoring_snapshots(week_start,player_id,activity,game_total,created_at) VALUES(?,?,?,?,?)", (week_start,pid,activity,getattr(e,'game_total',None),now))
                 updated += 1
